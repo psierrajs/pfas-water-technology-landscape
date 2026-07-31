@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Repository structure and search strategy preparation.
+Scientific literature search development and pilot screening.
 
 ## Overall status
 
@@ -24,6 +24,13 @@ In progress.
 * Created the initial repository directory structure.
 * Added placeholder files to preserve empty directories in Git.
 * Created placeholder files for the scientific literature and patent search strategies.
+* Documented the initial scientific literature search strategy.
+* Defined the initial PFAS, water and treatment concept blocks.
+* Identified preliminary technology-specific search terminology.
+* Performed a pilot search using the OpenAlex web interface.
+* Reviewed an initial sample of search results.
+* Defined preliminary publication-screening categories.
+* Refined the initial inclusion and exclusion decisions.
 
 ## Current files
 
@@ -50,10 +57,14 @@ In progress.
 * Capture and destruction technologies will be distinguished.
 * Interpretable intelligence analysis will be prioritised before machine learning, RAG or LLM workflows.
 * Restricted raw data and licensed database exports will not be published on GitHub.
+* Review articles will be retained and classified separately from experimental studies.
+* Studies of degradation products will be included when they directly evaluate a treatment process.
+* Analytical and monitoring studies without a treatment component will normally be excluded.
+* Broad retrieval followed by title and abstract screening is preferred over aggressive query exclusions.
 
 ## Next step
 
-Develop and document the initial scientific literature search strategy.
+Design a reproducible OpenAlex API query and retrieve a small metadata sample for screening.
 
 ## Known issues and open questions
 
@@ -61,6 +72,8 @@ Develop and document the initial scientific literature search strategy.
 * The exact fields for the processed dataset have not yet been finalised.
 * Patent family handling and organisation-name normalisation methods still need to be defined.
 * Public data-source licences and redistribution conditions must be reviewed before publishing datasets.
+* The distinction between analytical studies and treatment-performance studies may require manual judgement.
+* The initial OpenAlex query syntax and metadata fields still need to be tested.
 
 ## Last updated
 
