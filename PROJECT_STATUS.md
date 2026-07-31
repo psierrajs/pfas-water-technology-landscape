@@ -31,6 +31,13 @@ In progress.
 * Reviewed an initial sample of search results.
 * Defined preliminary publication-screening categories.
 * Refined the initial inclusion and exclusion decisions.
+* Created a Python virtual environment for the project.
+* Added `requests` as the first project dependency.
+* Created `requirements.txt` and `.env.example`.
+* Configured the OpenAlex API key locally without exposing it to Git.
+* Created the first reproducible OpenAlex query script.
+* Successfully retrieved and screened an initial sample of ten records.
+* Documented the initial OpenAlex API test and its screening results.
 
 ## Current files
 
@@ -61,10 +68,14 @@ In progress.
 * Studies of degradation products will be included when they directly evaluate a treatment process.
 * Analytical and monitoring studies without a treatment component will normally be excluded.
 * Broad retrieval followed by title and abstract screening is preferred over aggressive query exclusions.
+* API credentials will be stored only in the local `.env` file.
+* Initial OpenAlex queries will retrieve small samples before any large-scale collection.
+* Search performance will be assessed using both precision and recall.
+* Known relevant records will be used to test whether the query misses important technologies.
 
 ## Next step
 
-Design a reproducible OpenAlex API query and retrieve a small metadata sample for screening.
+Identify a small set of known relevant publications and use them to test the recall of the initial OpenAlex query.
 
 ## Known issues and open questions
 
@@ -74,6 +85,9 @@ Design a reproducible OpenAlex API query and retrieve a small metadata sample fo
 * Public data-source licences and redistribution conditions must be reviewed before publishing datasets.
 * The distinction between analytical studies and treatment-performance studies may require manual judgement.
 * The initial OpenAlex query syntax and metadata fields still need to be tested.
+* A reference set of known relevant publications still needs to be defined.
+* The first script prints records but does not yet save structured metadata.
+* Error handling and query configuration will need improvement before larger retrievals.
 
 ## Last updated
 

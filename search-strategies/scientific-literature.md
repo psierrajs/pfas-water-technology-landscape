@@ -268,3 +268,68 @@ Exclude records that:
 The phrase `water treatment` retrieves many relevant records but does not reliably exclude analytical studies.
 
 A broad search should therefore be followed by title and abstract screening rather than relying exclusively on restrictive query terms. Overly narrow exclusions may remove relevant studies that examine treatment performance through degradation products or analytical measurements.
+
+## 9. Initial OpenAlex API test
+
+### Test date
+
+2026-07-31
+
+### Endpoint
+
+```text
+https://api.openalex.org/works
+```
+
+### Parameters
+
+```text
+search=PFAS water treatment
+filter=from_publication_date:2018-01-01,to_publication_date:2026-12-31
+per-page=10
+```
+
+The API key was supplied locally through the `OPENALEX_API_KEY` environment variable and was not stored in the source code or committed to Git.
+
+### Implementation
+
+The initial query was implemented in:
+
+```text
+src/search_openalex.py
+```
+
+The script:
+
+* loads the API key from a local `.env` file;
+* sends a request to the OpenAlex works endpoint;
+* restricts publication dates to 2018–2026;
+* retrieves ten records;
+* prints the title, publication year and DOI;
+* does not yet save records to disk.
+
+### Initial screening results
+
+Of the first ten records:
+
+* seven were clearly relevant treatment studies or technology reviews;
+* one was relevant but combined PFAS occurrence with drinking-water treatment;
+* one concerned the general uses of PFAS and was considered a clear false positive;
+* one focused primarily on analytical workflows and was considered a probable exclusion.
+
+This represents an initial estimated relevance of approximately eight records out of ten.
+
+### Interpretation
+
+The natural-language query provides good initial precision and retrieves multiple technology categories, including:
+
+* adsorption;
+* ion exchange;
+* plasma treatment;
+* electrochemical oxidation;
+* separation and degradation technologies.
+
+However, the query also retrieves records in which PFAS and water-treatment terminology appear without a direct technology-treatment focus.
+
+The next query-development step should assess recall by testing whether known relevant studies are missed, rather than optimising precision solely from the first ten results.
+
