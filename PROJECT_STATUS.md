@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Repository setup and methodology definition.
+Repository structure and search strategy preparation.
 
 ## Overall status
 
@@ -21,6 +21,9 @@ In progress.
 * Documented the initial methodology.
 * Defined initial inclusion and exclusion criteria.
 * Documented copyright, licensing and confidentiality precautions.
+* Created the initial repository directory structure.
+* Added placeholder files to preserve empty directories in Git.
+* Created placeholder files for the scientific literature and patent search strategies.
 
 ## Current files
 
@@ -29,6 +32,14 @@ In progress.
 * `research-question.md`
 * `methodology.md`
 * `.gitignore`
+* `search-strategies/scientific-literature.md`
+* `search-strategies/patents.md`
+* `data/raw/`
+* `data/processed/`
+* `notebooks/`
+* `src/`
+* `figures/`
+* `reports/`
 
 ## Current methodological decisions
 
@@ -42,7 +53,7 @@ In progress.
 
 ## Next step
 
-Create the initial repository directory structure and placeholder files before developing the scientific literature search strategy.
+Develop and document the initial scientific literature search strategy.
 
 ## Known issues and open questions
 
@@ -53,4 +64,4 @@ Create the initial repository directory structure and placeholder files before d
 
 ## Last updated
 
-2026-07-30
+2026-07-31
