@@ -94,6 +94,26 @@ def extract_source(work: dict[str, Any]) -> str:
     source = primary_location.get("source") or {}
     return source.get("display_name") or ""
 
+def reconstruct_abstract(
+    inverted_index: dict[str, list[int]] | None,
+) -> str:
+    """Reconstruct an abstract from an OpenAlex inverted index."""
+    if not inverted_index:
+        return ""
+
+    positioned_words = []
+
+    for word, positions in inverted_index.items():
+        for position in positions:
+            positioned_words.append((position, word))
+
+    positioned_words.sort(key=lambda item: item[0])
+
+    return " ".join(
+        word
+        for _, word in positioned_words
+    )
+
 
 def fetch_query_results(
     query_id: str,
@@ -134,6 +154,9 @@ def fetch_query_results(
                 "openalex_id": work.get("id") or "",
                 "doi": work.get("doi") or "",
                 "title": work.get("title") or "",
+                "abstract": reconstruct_abstract(
+                    work.get("abstract_inverted_index")
+                ),
                 "publication_year": work.get("publication_year") or "",
                 "type": work.get("type") or "",
                 "source": extract_source(work),
@@ -157,6 +180,7 @@ def write_csv(rows: list[dict[str, Any]], output_path: Path) -> None:
         "openalex_id",
         "doi",
         "title",
+        "abstract",
         "publication_year",
         "type",
         "source",
