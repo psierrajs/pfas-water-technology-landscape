@@ -52,6 +52,9 @@ In progress.
 * Added an independent supercritical water oxidation reference.
 * Confirmed retrieval at position 52 in the broad query and position 1 in the technology-specific query.
 * Fixed case-sensitive DOI comparison in the recall-testing script.
+* Added an independent catalyzed hydrothermal liquefaction reference.
+* Confirmed that it was not found within the first 500 broad-query results.
+* Confirmed retrieval at position 3 in the technology-specific query.
 
 ## Current files
 
@@ -100,7 +103,7 @@ In progress.
 
 ## Next step
 
-Identify and test an independent reference for supercritical water oxidation or hydrothermal PFAS destruction.
+Identify and test an independent reference for catalytic PFAS degradation or a combined capture-and-destroy process.
 
 ## Known issues and open questions
 

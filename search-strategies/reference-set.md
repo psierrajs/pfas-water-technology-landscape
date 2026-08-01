@@ -90,6 +90,15 @@ The reference set is not intended to be exhaustive or statistically representati
     Category: supercritical water oxidation / PFAS destruction  
     Discovery method: independent OpenAlex search using `PFAS supercritical water oxidation`
 
+### Hydrothermal liquefaction
+
+13. PFAS destruction through catalyzed hydrothermal liquefaction using modified hydrochar  
+    Authors: Shukla Neha, Maja Nguyen, et al.  
+    Year: 2025  
+    DOI: https://doi.org/10.1016/j.jwpe.2025.107606  
+    Category: catalyzed hydrothermal liquefaction / PFAS destruction  
+    Discovery method: independent OpenAlex search using `PFAS hydrothermal liquefaction`
+
 ## Initial recall test
 
 The first OpenAlex query retrieved all eight publications initially listed in this reference set within its first ten results.
@@ -153,6 +162,16 @@ It was retrieved at position 1 for the technology-specific query `PFAS supercrit
 An initial false-negative result was caused by case-sensitive DOI comparison in the recall-testing script. OpenAlex returned the DOI in lowercase, while the reference DOI contained uppercase characters.
 
 The DOI-normalisation function was updated to compare lowercase canonical DOI URLs.
+
+### Recall-test result for the hydrothermal liquefaction reference
+
+The publication is indexed in OpenAlex.
+
+It was not retrieved within the first 500 results of the broad query `PFAS water treatment`.
+
+It was retrieved at position 3 for the technology-specific query `PFAS hydrothermal liquefaction`.
+
+This result provides further evidence that hydrothermal destruction technologies require targeted terminology in the literature search strategy.
 
 ## Current recall-test interpretation
 
