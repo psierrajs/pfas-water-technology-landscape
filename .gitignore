@@ -40,3 +40,8 @@ data/raw/*
 
 # Generated reports
 reports/*.pdf
+
+# Generated processed datasets
+data/processed/*.csv
+
+
