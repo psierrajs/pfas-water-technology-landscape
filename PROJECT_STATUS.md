@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Scientific literature search development and pilot screening.
+Scientific literature search validation and OpenAlex recall testing.
 
 ## Overall status
 
@@ -39,8 +39,12 @@ In progress.
 * Successfully retrieved and screened an initial sample of ten records.
 * Documented the initial OpenAlex API test and its screening results.
 * Created an initial scientific literature reference set.
-* Classified eight known relevant publications by technology category.
-* Documented the limitations of using query-derived records for recall testing.
+* Classified ten relevant publications by technology category.
+* Added independently discovered membrane and photocatalysis references.
+* Created a reusable DOI-based recall-checking script.
+* Confirmed that the membrane reference appears at position 64.
+* Confirmed that the photocatalysis reference appears at position 113.
+* Documented the effect of ranking on apparent search recall.
 
 ## Current files
 
@@ -49,8 +53,13 @@ In progress.
 * `research-question.md`
 * `methodology.md`
 * `.gitignore`
+* `.env.example`
+* `requirements.txt`
 * `search-strategies/scientific-literature.md`
+* `search-strategies/reference-set.md`
 * `search-strategies/patents.md`
+* `src/search_openalex.py`
+* `src/check_reference_recall.py`
 * `data/raw/`
 * `data/processed/`
 * `notebooks/`
@@ -75,10 +84,13 @@ In progress.
 * Initial OpenAlex queries will retrieve small samples before any large-scale collection.
 * Search performance will be assessed using both precision and recall.
 * Known relevant records will be used to test whether the query misses important technologies.
+* Recall testing will use DOI-based validation and paginated result inspection.
+* Small result samples are not sufficient to judge technology coverage because relevant records may rank substantially lower.
+* Technology-specific searches will be used to identify underrepresented categories and strengthen the reference set.
 
 ## Next step
 
-Identify independently discovered publications for membrane, photocatalysis, sonolysis, supercritical water oxidation and other underrepresented technology categories.
+Identify and test independent references for sonolysis, supercritical water oxidation, hydrothermal treatment, catalytic degradation and combined capture-and-destruction processes.
 
 ## Known issues and open questions
 
@@ -87,12 +99,12 @@ Identify independently discovered publications for membrane, photocatalysis, son
 * Patent family handling and organisation-name normalisation methods still need to be defined.
 * Public data-source licences and redistribution conditions must be reviewed before publishing datasets.
 * The distinction between analytical studies and treatment-performance studies may require manual judgement.
-* The initial OpenAlex query syntax and metadata fields still need to be tested.
-* A reference set of known relevant publications still needs to be defined.
-* The first script prints records but does not yet save structured metadata.
+* The OpenAlex query syntax and metadata fields still need further testing.
+* The reference set remains small and is not statistically representative.
+* Several destructive and combined technology categories remain absent from the reference set.
+* The first search script prints records but does not yet save structured metadata.
 * Error handling and query configuration will need improvement before larger retrievals.
-* The current reference set is not independent because most records were discovered through the query being evaluated.
-* Membrane and several destructive technology categories are not yet represented in the reference set.
+* Ranking differences may bias conclusions if only small result windows are analysed.
 
 ## Last updated
 

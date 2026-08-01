@@ -54,11 +54,75 @@ The reference set is not intended to be exhaustive or statistically representati
    DOI: https://doi.org/10.1021/acsestwater.2c00660  
    Category: electrochemical oxidation / pilot scale
 
+### Membrane technologies
+
+9. High-pressure membrane filtration processes for separation of per- and polyfluoroalkyl substances (PFAS)  
+   Authors: Tae Lee, Thomas F. Speth and Mallikarjuna N. Nadagouda  
+   Year: 2022  
+   DOI: https://doi.org/10.1016/j.cej.2021.134023  
+   Category: membrane separation / nanofiltration / reverse osmosis  
+   Discovery method: independent OpenAlex search using `PFAS membrane water treatment`
+
+### Photocatalysis
+
+10. Degradation of per- and polyfluoroalkyl substances (PFAS) in wastewater effluents by photocatalysis for water reuse  
+    Authors: Chunjie Xia, Xian Lim, Haoran Yang, Boyd M. Goodson and Jia Liu  
+    Year: 2022  
+    DOI: https://doi.org/10.1016/j.jwpe.2021.102556  
+    Category: photocatalytic degradation / wastewater reuse  
+    Discovery method: independent OpenAlex search using `PFAS photocatalysis water degradation`
+
 ## Initial recall test
 
-The first OpenAlex query retrieved all eight publications listed above within its first ten results.
+The first OpenAlex query retrieved all eight publications initially listed in this reference set within its first ten results.
 
-This is encouraging but does not yet demonstrate strong recall because the reference set was derived mainly from records already discovered through the same query.
+This is encouraging but does not demonstrate strong independent recall because those records were mainly discovered through the same query being evaluated.
 
-The next step is to identify additional known relevant publications from technology reviews or independent searches and test whether the query retrieves them.
+Two additional publications were therefore identified through technology-specific searches:
 
+* one membrane-filtration publication;
+* one photocatalysis publication.
+
+These independently discovered records were then tested against the general query `PFAS water treatment`.
+
+### Recall-test result for the membrane reference
+
+The general OpenAlex query `PFAS water treatment` retrieved the membrane-filtration publication at position 64.
+
+This indicates that the broad query captures the publication, but ranks it substantially lower than the initial review, adsorption, plasma and electrochemical-oxidation records.
+
+The result supports using larger retrieval sets for recall testing and technology-specific searches for underrepresented categories.
+
+### Recall-test result for the photocatalysis reference
+
+The photocatalysis publication is indexed in OpenAlex and was retrieved at position 113 for the general query `PFAS water treatment`.
+
+This indicates that the broad query captures the publication, but ranks it substantially lower than the initial review, adsorption, plasma, electrochemical-oxidation and membrane records.
+
+The result confirms that inspecting only the first 100 records would underestimate recall for some technology categories.
+
+It also supports using:
+
+* larger retrieval sets for recall testing;
+* DOI-based validation against a reference set;
+* technology-specific searches for underrepresented categories.
+
+## Current recall-test interpretation
+
+The general query successfully retrieved all ten publications currently included in the reference set.
+
+However, ranking varied substantially:
+
+* the original eight records appeared within the first ten results;
+* the membrane reference appeared at position 64;
+* the photocatalysis reference appeared at position 113.
+
+The current evidence suggests that the query has promising recall for the tested publications, but ranking bias may make some technology categories less visible in small result samples.
+
+Further independent references are still needed for:
+
+* sonolysis;
+* supercritical water oxidation;
+* hydrothermal treatment;
+* catalytic degradation;
+* combined capture-and-destruction processes.
