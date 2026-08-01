@@ -49,6 +49,9 @@ In progress.
 * Confirmed that the sonolysis reference was not found within the first 500 results of the broad query.
 * Confirmed that the same reference appeared at position 8 in a technology-specific sonolysis query.
 * Identified a practical recall gap in the single-query search design.
+* Added an independent supercritical water oxidation reference.
+* Confirmed retrieval at position 52 in the broad query and position 1 in the technology-specific query.
+* Fixed case-sensitive DOI comparison in the recall-testing script.
 
 ## Current files
 

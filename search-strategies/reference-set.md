@@ -81,6 +81,15 @@ The reference set is not intended to be exhaustive or statistically representati
     Category: sonolysis / ultrasonic degradation  
     Discovery method: independent OpenAlex search using `PFAS sonolysis water degradation`
 
+### Supercritical water oxidation
+
+12. Supercritical Water Oxidation as an Innovative Technology for PFAS Destruction  
+    Authors: Max J. Krause, Eben Thoma, Endalkachew Sahle-Damesessie, Brian C. Crone, Andrew Whitehill, Erin Shields and Brian Gullett  
+    Year: 2022  
+    DOI: https://doi.org/10.1061/(ASCE)EE.1943-7870.0001957  
+    Category: supercritical water oxidation / PFAS destruction  
+    Discovery method: independent OpenAlex search using `PFAS supercritical water oxidation`
+
 ## Initial recall test
 
 The first OpenAlex query retrieved all eight publications initially listed in this reference set within its first ten results.
@@ -132,6 +141,18 @@ The result supports a combined search design consisting of:
 * separate technology-specific queries;
 * DOI-based validation against an independent reference set;
 * deduplication of records retrieved through multiple searches.
+
+### Recall-test result for the supercritical water oxidation reference
+
+The publication is indexed in OpenAlex.
+
+It was retrieved at position 52 for the broad query `PFAS water treatment`.
+
+It was retrieved at position 1 for the technology-specific query `PFAS supercritical water oxidation`.
+
+An initial false-negative result was caused by case-sensitive DOI comparison in the recall-testing script. OpenAlex returned the DOI in lowercase, while the reference DOI contained uppercase characters.
+
+The DOI-normalisation function was updated to compare lowercase canonical DOI URLs.
 
 ## Current recall-test interpretation
 

@@ -27,14 +27,21 @@ def load_env_file(env_path: Path) -> None:
 
 
 def normalise_doi(doi: str) -> str:
-    """Return a DOI in the URL format used by OpenAlex."""
-    doi = doi.strip()
+    """Return a normalised DOI URL for case-insensitive comparison."""
+    doi = doi.strip().lower()
 
-    if doi.startswith("https://doi.org/"):
-        return doi
+    for prefix in (
+        "https://doi.org/",
+        "http://doi.org/",
+        "https://dx.doi.org/",
+        "http://dx.doi.org/",
+        "doi:",
+    ):
+        if doi.startswith(prefix):
+            doi = doi[len(prefix):]
+            break
 
-    return f"https://doi.org/{doi}"
-
+    return f"https://doi.org/{doi.strip()}"
 
 def confirm_indexed(api_key: str, target_doi: str) -> bool:
     """Check whether a DOI exists in OpenAlex."""
