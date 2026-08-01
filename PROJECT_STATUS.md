@@ -38,6 +38,9 @@ In progress.
 * Created the first reproducible OpenAlex query script.
 * Successfully retrieved and screened an initial sample of ten records.
 * Documented the initial OpenAlex API test and its screening results.
+* Created an initial scientific literature reference set.
+* Classified eight known relevant publications by technology category.
+* Documented the limitations of using query-derived records for recall testing.
 
 ## Current files
 
@@ -75,7 +78,7 @@ In progress.
 
 ## Next step
 
-Identify a small set of known relevant publications and use them to test the recall of the initial OpenAlex query.
+Identify independently discovered publications for membrane, photocatalysis, sonolysis, supercritical water oxidation and other underrepresented technology categories.
 
 ## Known issues and open questions
 
@@ -88,7 +91,9 @@ Identify a small set of known relevant publications and use them to test the rec
 * A reference set of known relevant publications still needs to be defined.
 * The first script prints records but does not yet save structured metadata.
 * Error handling and query configuration will need improvement before larger retrievals.
+* The current reference set is not independent because most records were discovered through the query being evaluated.
+* Membrane and several destructive technology categories are not yet represented in the reference set.
 
 ## Last updated
 
-2026-07-31
+2026-08-01
