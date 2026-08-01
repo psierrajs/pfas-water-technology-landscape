@@ -99,6 +99,15 @@ The reference set is not intended to be exhaustive or statistically representati
     Category: catalyzed hydrothermal liquefaction / PFAS destruction  
     Discovery method: independent OpenAlex search using `PFAS hydrothermal liquefaction`
 
+### Combined adsorption and electrochemical oxidation
+
+14. Comparison of perfluorooctane sulfonate (PFOS), perfluorooctanoic acid (PFOA) and perfluorobutane sulfonate (PFBS) removal in a combined adsorption and electrochemical oxidation process  
+    Authors: Antoine P. Trzcinski and Kouji H. Harada  
+    Year: 2024  
+    DOI: https://doi.org/10.1016/j.scitotenv.2024.172184  
+    Category: combined adsorption and electrochemical oxidation / capture-and-destroy  
+    Discovery method: independent OpenAlex search using `PFAS combined adsorption electrochemical oxidation`
+
 ## Initial recall test
 
 The first OpenAlex query retrieved all eight publications initially listed in this reference set within its first ten results.
@@ -172,6 +181,18 @@ It was not retrieved within the first 500 results of the broad query `PFAS water
 It was retrieved at position 3 for the technology-specific query `PFAS hydrothermal liquefaction`.
 
 This result provides further evidence that hydrothermal destruction technologies require targeted terminology in the literature search strategy.
+
+### Recall-test result for the combined capture-and-destroy reference
+
+The publication is indexed in OpenAlex.
+
+It was not retrieved within the first 500 results of the broad query `PFAS water treatment`.
+
+It was retrieved at position 28 for the technology-specific query `PFAS combined adsorption electrochemical oxidation`.
+
+This result confirms that combined capture-and-destroy processes are poorly represented by the broad query and require targeted search terminology.
+
+The position of 28 also suggests that alternative formulations may improve ranking, particularly queries using the exact process names rather than the broader term `PFAS`.
 
 ## Current recall-test interpretation
 

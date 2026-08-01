@@ -55,6 +55,10 @@ In progress.
 * Added an independent catalyzed hydrothermal liquefaction reference.
 * Confirmed that it was not found within the first 500 broad-query results.
 * Confirmed retrieval at position 3 in the technology-specific query.
+* Added an independent combined adsorption and electrochemical oxidation reference.
+* Confirmed that it was not retrieved within the first 500 broad-query results.
+* Confirmed retrieval at position 28 in the technology-specific query.
+* Completed initial recall testing across the main missing technology categories.
 
 ## Current files
 
@@ -103,7 +107,7 @@ In progress.
 
 ## Next step
 
-Identify and test an independent reference for catalytic PFAS degradation or a combined capture-and-destroy process.
+Review the complete reference-set recall results and design the first reproducible set of broad and technology-specific OpenAlex queries.
 
 ## Known issues and open questions
 
