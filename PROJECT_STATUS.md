@@ -45,6 +45,10 @@ In progress.
 * Confirmed that the membrane reference appears at position 64.
 * Confirmed that the photocatalysis reference appears at position 113.
 * Documented the effect of ranking on apparent search recall.
+* Added an independent sonolysis reference to the scientific literature reference set.
+* Confirmed that the sonolysis reference was not found within the first 500 results of the broad query.
+* Confirmed that the same reference appeared at position 8 in a technology-specific sonolysis query.
+* Identified a practical recall gap in the single-query search design.
 
 ## Current files
 
@@ -87,10 +91,13 @@ In progress.
 * Recall testing will use DOI-based validation and paginated result inspection.
 * Small result samples are not sufficient to judge technology coverage because relevant records may rank substantially lower.
 * Technology-specific searches will be used to identify underrepresented categories and strengthen the reference set.
+* The literature search will combine one broad query with technology-specific queries.
+* Technology-specific queries are required where the broad query shows inadequate practical recall.
+* Results from multiple queries will need DOI-based or OpenAlex-ID-based deduplication.
 
 ## Next step
 
-Identify and test independent references for sonolysis, supercritical water oxidation, hydrothermal treatment, catalytic degradation and combined capture-and-destruction processes.
+Identify and test an independent reference for supercritical water oxidation or hydrothermal PFAS destruction.
 
 ## Known issues and open questions
 
@@ -105,6 +112,8 @@ Identify and test independent references for sonolysis, supercritical water oxid
 * The first search script prints records but does not yet save structured metadata.
 * Error handling and query configuration will need improvement before larger retrievals.
 * Ranking differences may bias conclusions if only small result windows are analysed.
+* The number and scope of technology-specific queries still need to be defined.
+* A reproducible deduplication method will be required when combining query results.
 
 ## Last updated
 

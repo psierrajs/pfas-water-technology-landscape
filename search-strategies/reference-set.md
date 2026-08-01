@@ -72,6 +72,15 @@ The reference set is not intended to be exhaustive or statistically representati
     Category: photocatalytic degradation / wastewater reuse  
     Discovery method: independent OpenAlex search using `PFAS photocatalysis water degradation`
 
+### Sonolysis
+
+11. Ultrasonic degradation of perfluorooctane sulfonic acid (PFOS) correlated with sonochemical and sonoluminescence characterisation  
+    Authors: Richard James Wood, Tim Sidnell, Ian Ross, Jeffrey McDonough, Judy Lee and Madeleine J. Bussemaker  
+    Year: 2020  
+    DOI: https://doi.org/10.1016/j.ultsonch.2020.105196  
+    Category: sonolysis / ultrasonic degradation  
+    Discovery method: independent OpenAlex search using `PFAS sonolysis water degradation`
+
 ## Initial recall test
 
 The first OpenAlex query retrieved all eight publications initially listed in this reference set within its first ten results.
@@ -107,15 +116,33 @@ It also supports using:
 * DOI-based validation against a reference set;
 * technology-specific searches for underrepresented categories.
 
+### Recall-test result for the sonolysis reference
+
+The sonolysis publication is indexed in OpenAlex.
+
+It was not retrieved within the first 500 results of the general query `PFAS water treatment`.
+
+However, it was retrieved at position 8 for the technology-specific query `PFAS sonolysis water degradation`.
+
+This indicates that the general query does not provide adequate practical recall for this technology category, even though the publication is indexed and easily retrieved using targeted terminology.
+
+The result supports a combined search design consisting of:
+
+* one broad cross-technology query;
+* separate technology-specific queries;
+* DOI-based validation against an independent reference set;
+* deduplication of records retrieved through multiple searches.
+
 ## Current recall-test interpretation
 
-The general query successfully retrieved all ten publications currently included in the reference set.
+The general query retrieved ten of the eleven publications currently included in the reference set within the inspected result windows.
 
 However, ranking varied substantially:
 
 * the original eight records appeared within the first ten results;
 * the membrane reference appeared at position 64;
 * the photocatalysis reference appeared at position 113.
+* the sonolysis reference was not found within the first 500 general-query results but appeared at position 8 in the technology-specific search.
 
 The current evidence suggests that the query has promising recall for the tested publications, but ranking bias may make some technology categories less visible in small result samples.
 
