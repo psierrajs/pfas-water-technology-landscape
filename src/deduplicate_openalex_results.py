@@ -2,9 +2,21 @@ from __future__ import annotations
 
 import argparse
 import csv
+import re
+import unicodedata
 from collections import defaultdict
 from pathlib import Path
 from typing import Any
+
+
+PREPRINT_DOI_MARKERS = (
+    "10.20944/preprints",
+    "10.2139/ssrn",
+    "10.26434/chemrxiv",
+    "10.31223/",
+    "10.1101/",
+    "scimeetings",
+)
 
 
 def normalise_identifier(value: str) -> str:
@@ -12,8 +24,17 @@ def normalise_identifier(value: str) -> str:
     return value.strip().lower()
 
 
+def normalise_title(value: str) -> str:
+    """Normalize title punctuation, spacing, case, and dash variants."""
+    value = unicodedata.normalize("NFKD", value)
+    value = value.encode("ascii", "ignore").decode("ascii")
+    value = value.lower()
+    value = re.sub(r"[^a-z0-9]+", " ", value)
+    return " ".join(value.split())
+
+
 def record_key(row: dict[str, str]) -> str:
-    """Prefer DOI, then OpenAlex ID, then title as a deduplication key."""
+    """Prefer DOI, then OpenAlex ID, then normalized title."""
     doi = normalise_identifier(row.get("doi", ""))
 
     if doi:
@@ -24,7 +45,7 @@ def record_key(row: dict[str, str]) -> str:
     if openalex_id:
         return f"openalex:{openalex_id}"
 
-    title = normalise_identifier(row.get("title", ""))
+    title = normalise_title(row.get("title", ""))
 
     if title:
         return f"title:{title}"
@@ -38,68 +59,176 @@ def read_csv(path: Path) -> list[dict[str, str]]:
         return list(csv.DictReader(file))
 
 
+def split_values(value: str) -> set[str]:
+    """Split semicolon-delimited provenance values."""
+    return {
+        item.strip()
+        for item in value.split(";")
+        if item.strip()
+    }
+
+
+def integer_value(value: str, default: int = 0) -> int:
+    """Safely convert a string to an integer."""
+    try:
+        return int(value or default)
+    except ValueError:
+        return default
+
+
+def is_preprint_like(row: dict[str, Any]) -> bool:
+    """Return True for common preprint and meeting-record identifiers."""
+    doi = normalise_identifier(str(row.get("doi", "")))
+    source = normalise_identifier(str(row.get("source", "")))
+    work_type = normalise_identifier(str(row.get("type", "")))
+
+    if any(marker in doi for marker in PREPRINT_DOI_MARKERS):
+        return True
+
+    return (
+        "preprint" in source
+        or "preprint" in work_type
+        or "posted-content" in work_type
+    )
+
+
+def preferred_record_key(row: dict[str, Any]) -> tuple[int, int, int, int]:
+    """
+    Rank records so final publications are preferred over preprints.
+
+    Preference order:
+    1. Non-preprint records
+    2. Records with an abstract
+    3. Records with more citations
+    4. Records with a DOI
+    """
+    return (
+        0 if is_preprint_like(row) else 1,
+        1 if str(row.get("abstract", "")).strip() else 0,
+        integer_value(str(row.get("cited_by_count", "0"))),
+        1 if str(row.get("doi", "")).strip() else 0,
+    )
+
+
+def merge_raw_query_hits(
+    matching_rows: list[dict[str, str]],
+) -> dict[str, Any]:
+    """Merge duplicate query hits for a single bibliographic record."""
+    matching_rows.sort(
+        key=lambda row: (
+            row.get("query_id", ""),
+            integer_value(row.get("rank", "0")),
+        )
+    )
+
+    first = matching_rows[0]
+
+    query_ids = sorted(
+        {
+            row.get("query_id", "")
+            for row in matching_rows
+            if row.get("query_id")
+        }
+    )
+
+    categories = sorted(
+        {
+            row.get("category", "")
+            for row in matching_rows
+            if row.get("category")
+        }
+    )
+
+    best_rank = min(
+        integer_value(row.get("rank", "0"))
+        for row in matching_rows
+    )
+
+    return {
+        "openalex_id": first.get("openalex_id", ""),
+        "doi": first.get("doi", ""),
+        "title": first.get("title", ""),
+        "abstract": first.get("abstract", ""),
+        "publication_year": first.get("publication_year", ""),
+        "type": first.get("type", ""),
+        "source": first.get("source", ""),
+        "authors": first.get("authors", ""),
+        "cited_by_count": first.get("cited_by_count", ""),
+        "query_count": len(query_ids),
+        "query_ids": ";".join(query_ids),
+        "categories": ";".join(categories),
+        "best_rank": best_rank,
+    }
+
+
+def merge_title_versions(
+    matching_rows: list[dict[str, Any]],
+) -> dict[str, Any]:
+    """
+    Merge preprint, conference, and journal versions sharing a title.
+
+    Bibliographic fields come from the preferred version, while search
+    provenance is combined across every version.
+    """
+    preferred = max(matching_rows, key=preferred_record_key)
+
+    query_ids: set[str] = set()
+    categories: set[str] = set()
+
+    for row in matching_rows:
+        query_ids.update(split_values(str(row.get("query_ids", ""))))
+        categories.update(split_values(str(row.get("categories", ""))))
+
+    best_rank = min(
+        integer_value(str(row.get("best_rank", "0")))
+        for row in matching_rows
+    )
+
+    merged = dict(preferred)
+    merged["query_ids"] = ";".join(sorted(query_ids))
+    merged["query_count"] = len(query_ids)
+    merged["categories"] = ";".join(sorted(categories))
+    merged["best_rank"] = best_rank
+
+    return merged
+
+
 def deduplicate_rows(rows: list[dict[str, str]]) -> list[dict[str, Any]]:
-    """Merge duplicate records while retaining query provenance."""
-    grouped: dict[str, list[dict[str, str]]] = defaultdict(list)
+    """
+    Deduplicate query hits and bibliographic versions.
+
+    Pass 1 merges repeated search hits using DOI, OpenAlex ID, or title.
+    Pass 2 merges preprint and published versions with normalized titles.
+    """
+    identifier_groups: dict[str, list[dict[str, str]]] = defaultdict(list)
 
     for row in rows:
-        grouped[record_key(row)].append(row)
+        identifier_groups[record_key(row)].append(row)
 
-    deduplicated = []
+    identifier_deduplicated = [
+        merge_raw_query_hits(matching_rows)
+        for matching_rows in identifier_groups.values()
+    ]
 
-    for matching_rows in grouped.values():
-        matching_rows.sort(
-            key=lambda row: (
-                row.get("query_id", ""),
-                int(row.get("rank", "0") or 0),
-            )
-        )
+    title_groups: dict[str, list[dict[str, Any]]] = defaultdict(list)
 
-        first = matching_rows[0]
+    for row in identifier_deduplicated:
+        normalized_title = normalise_title(str(row.get("title", "")))
 
-        query_ids = sorted(
-            {
-                row.get("query_id", "")
-                for row in matching_rows
-                if row.get("query_id")
-            }
-        )
+        if normalized_title:
+            title_groups[normalized_title].append(row)
+        else:
+            title_groups[f"openalex:{row.get('openalex_id', '')}"].append(row)
 
-        categories = sorted(
-            {
-                row.get("category", "")
-                for row in matching_rows
-                if row.get("category")
-            }
-        )
-
-        best_rank = min(
-            int(row.get("rank", "0") or 0)
-            for row in matching_rows
-        )
-
-        deduplicated.append(
-            {
-                "openalex_id": first.get("openalex_id", ""),
-                "doi": first.get("doi", ""),
-                "title": first.get("title", ""),
-                "abstract": first.get("abstract", ""),
-                "publication_year": first.get("publication_year", ""),
-                "type": first.get("type", ""),
-                "source": first.get("source", ""),
-                "authors": first.get("authors", ""),
-                "cited_by_count": first.get("cited_by_count", ""),
-                "query_count": len(query_ids),
-                "query_ids": ";".join(query_ids),
-                "categories": ";".join(categories),
-                "best_rank": best_rank,
-            }
-        )
+    deduplicated = [
+        merge_title_versions(matching_rows)
+        for matching_rows in title_groups.values()
+    ]
 
     deduplicated.sort(
         key=lambda row: (
-            -int(row["query_count"]),
-            int(row["best_rank"]),
+            -integer_value(str(row["query_count"])),
+            integer_value(str(row["best_rank"])),
             str(row["title"]).lower(),
         )
     )
@@ -135,7 +264,9 @@ def write_csv(rows: list[dict[str, Any]], path: Path) -> None:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Deduplicate OpenAlex query results."
+        description=(
+            "Deduplicate OpenAlex query hits and publication versions."
+        )
     )
     parser.add_argument(
         "--input",
@@ -163,7 +294,7 @@ def main() -> None:
 
     print(f"Input records: {len(rows)}")
     print(f"Unique records: {len(deduplicated)}")
-    print(f"Duplicate query hits merged: {duplicate_count}")
+    print(f"Duplicate records merged: {duplicate_count}")
     print(f"Saved to: {args.output}")
 
 
