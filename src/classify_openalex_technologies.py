@@ -62,16 +62,28 @@ TECHNOLOGY_RULES = {
         r"\bscwo\b",
     ],
     "hydrothermal": [
-        r"\bhydrothermal\b",
         r"\bhydrothermal liquefaction\b",
         r"\balkaline hydrothermal\b",
+        r"\bhydrothermal "
+        r"(?:treatment|processing|process|degradation|destruction)\b",
+        r"\bhydrothermal(?:ly)? (?:degrad|destroy|treat)",
     ],
     "thermal": [
-        r"\bthermal treatment\b",
         r"\bthermal destruction\b",
-        r"\bpyrolysis\b",
-        r"\bincineration\b",
-        r"\binduction heating\b",
+        r"\bthermal degradation\b",
+        r"\bPFAS.{0,120}\bthermal treatment\b",
+        r"\bthermal treatment\b.{0,120}\bPFAS\b",
+        r"\bpyrolysis of "
+        r"(?:PFAS|PFAS-containing|PFAS-contaminated)\b",
+        r"\bPFAS (?:destruction|degradation|treatment) "
+        r"(?:by|using|via) pyrolysis\b",
+        r"\bpyrolytic "
+        r"(?:destruction|degradation|treatment) of PFAS\b",
+        r"\bPFAS-contaminated .{0,60}\bpyrolysis\b",
+        r"\bPFAS.{0,120}\bincineration\b",
+        r"\bincineration\b.{0,120}\bPFAS\b",
+        r"\bPFAS.{0,120}\binduction heating\b",
+        r"\binduction heating\b.{0,120}\bPFAS\b",
     ],
     "biological": [
         r"\bbiodegradation\b",
@@ -80,23 +92,25 @@ TECHNOLOGY_RULES = {
         r"\bbioremediation\b",
     ],
     "capture_and_destroy": [
-    r"\bcapture[- ]and[- ]destroy\b",
-    r"\bcombined adsorption and electrochemical oxidation\b",
-    r"\bfoam fractionation (?:combined with|followed by|coupled with) "
-    r"(?:electrochemical oxidation|plasma|destruction)\b",
-    r"\badsorption (?:combined with|followed by|coupled with) "
-    r"(?:electrochemical oxidation|plasma|destruction)\b",
-    r"\bion exchange (?:combined with|followed by|coupled with) "
-    r"(?:electrochemical oxidation|plasma|destruction)\b",
-    r"\bmembrane concentrate(?:s)? "
-    r"(?:treated by|treated with|followed by|coupled with) "
-    r"(?:electrochemical oxidation|plasma|hydrothermal|destruction)\b",
-    r"\bregeneration solution(?:s)? "
-    r"(?:treated by|treated with|followed by|coupled with) "
-    r"(?:electrochemical oxidation|plasma|destruction)\b",
+        r"\bcapture[- ]and[- ]destroy\b",
+        r"\bcombined adsorption and electrochemical oxidation\b",
+        r"\bfoam fractionation "
+        r"(?:combined with|followed by|coupled with) "
+        r"(?:electrochemical oxidation|plasma|destruction)\b",
+        r"\badsorption "
+        r"(?:combined with|followed by|coupled with) "
+        r"(?:electrochemical oxidation|plasma|destruction)\b",
+        r"\bion exchange "
+        r"(?:combined with|followed by|coupled with) "
+        r"(?:electrochemical oxidation|plasma|destruction)\b",
+        r"\bmembrane concentrate(?:s)? "
+        r"(?:treated by|treated with|followed by|coupled with) "
+        r"(?:electrochemical oxidation|plasma|hydrothermal|destruction)\b",
+        r"\bregeneration solution(?:s)? "
+        r"(?:treated by|treated with|followed by|coupled with) "
+        r"(?:electrochemical oxidation|plasma|destruction)\b",
     ],
 }
-
 
 
 def read_csv(path: Path) -> list[dict[str, str]]:
@@ -108,7 +122,11 @@ def read_csv(path: Path) -> list[dict[str, str]]:
 def matches_any(text: str, patterns: list[str]) -> bool:
     """Return True when any regular-expression pattern matches."""
     return any(
-        re.search(pattern, text, flags=re.IGNORECASE)
+        re.search(
+            pattern,
+            text,
+            flags=re.IGNORECASE | re.DOTALL,
+        )
         for pattern in patterns
     )
 
