@@ -80,36 +80,23 @@ TECHNOLOGY_RULES = {
         r"\bbioremediation\b",
     ],
     "capture_and_destroy": [
-        r"\bcapture[- ]and[- ]destroy\b",
-        r"\bcombined adsorption and electrochemical oxidation\b",
-        r"\badsorption followed by .*oxidation\b",
-        r"\bconcentrat.* followed by .*destruction\b",
-        r"\bmembrane concentrate.*destruction\b",
-        r"\bregeneration solution.*oxidation\b",
+    r"\bcapture[- ]and[- ]destroy\b",
+    r"\bcombined adsorption and electrochemical oxidation\b",
+    r"\bfoam fractionation (?:combined with|followed by|coupled with) "
+    r"(?:electrochemical oxidation|plasma|destruction)\b",
+    r"\badsorption (?:combined with|followed by|coupled with) "
+    r"(?:electrochemical oxidation|plasma|destruction)\b",
+    r"\bion exchange (?:combined with|followed by|coupled with) "
+    r"(?:electrochemical oxidation|plasma|destruction)\b",
+    r"\bmembrane concentrate(?:s)? "
+    r"(?:treated by|treated with|followed by|coupled with) "
+    r"(?:electrochemical oxidation|plasma|hydrothermal|destruction)\b",
+    r"\bregeneration solution(?:s)? "
+    r"(?:treated by|treated with|followed by|coupled with) "
+    r"(?:electrochemical oxidation|plasma|destruction)\b",
     ],
 }
 
-
-CAPTURE_TERMS = [
-    r"\badsorp",
-    r"\bion exchange\b",
-    r"\bmembrane\b",
-    r"\bfoam fractionation\b",
-    r"\bconcentrat",
-]
-
-DESTRUCTION_TERMS = [
-    r"\bdegrad",
-    r"\bdestroy",
-    r"\bdestruction\b",
-    r"\bmineraliz",
-    r"\bdefluorinat",
-    r"\boxidation\b",
-    r"\bplasma\b",
-    r"\bsonolysis\b",
-    r"\bphotocatal",
-    r"\bhydrothermal\b",
-]
 
 
 def read_csv(path: Path) -> list[dict[str, str]]:
@@ -134,16 +121,6 @@ def classify_text(title: str, abstract: str) -> list[str]:
     for technology, patterns in TECHNOLOGY_RULES.items():
         if matches_any(text, patterns):
             labels.append(technology)
-
-    has_capture = matches_any(text, CAPTURE_TERMS)
-    has_destruction = matches_any(text, DESTRUCTION_TERMS)
-
-    if (
-        has_capture
-        and has_destruction
-        and "capture_and_destroy" not in labels
-    ):
-        labels.append("capture_and_destroy")
 
     return sorted(labels)
 
