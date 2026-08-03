@@ -59,3 +59,6 @@ data/processed/institutions/
 data/processed/openalex_authorships.csv
 data/processed/openalex_authorships_test.csv
 data/raw/openalex_work_cache/
+
+# Generated institution collaboration outputs
+data/processed/institution_collaborations/

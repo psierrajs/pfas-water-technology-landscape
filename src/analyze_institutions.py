@@ -25,8 +25,42 @@ INSTITUTION_ALIASES = {
     "https://openalex.org/I4210126337": (
         "https://openalex.org/I197809005"
     ),
+    "https://openalex.org/I113508548": (
+        "https://openalex.org/I392282"
+    ),
+    "https://openalex.org/I4210150356": (
+        "https://openalex.org/I201448701"
+    ),
 }
 
+CANONICAL_INSTITUTION_METADATA = {
+    "https://openalex.org/I197809005": {
+        "institution_name": (
+            'University of Campania "Luigi Vanvitelli"'
+        ),
+        "country_code": "IT",
+        "institution_type": "education",
+        "institution_ror": "https://ror.org/02kqnpp86",
+    },
+    "https://openalex.org/I392282": {
+        "institution_name": (
+            "University at Albany, "
+            "State University of New York"
+        ),
+        "country_code": "US",
+        "institution_type": "education",
+        "institution_ror": "",
+    },
+    "https://openalex.org/I201448701": {
+        "institution_name": "University of Washington",
+        "country_code": "US",
+        "institution_type": "education",
+        "institution_ror": "",
+    },
+}
+
+US_EPA_ID = "https://openalex.org/I1302368450"
+GHANA_EPA_ID = "https://openalex.org/I182185646"
 
 def read_csv(path: Path) -> list[dict[str, str]]:
     """Read the enriched authorship dataset."""
@@ -61,6 +95,38 @@ def canonical_institution_id(
         institution_id,
         institution_id,
     )
+
+def corrected_institution_id(
+    row: dict[str, str],
+) -> str:
+    """Correct known affiliation-resolution errors."""
+    institution_id = canonical_institution_id(
+        row.get("institution_id", "").strip()
+    )
+
+    raw_affiliation = row.get(
+        "raw_affiliations",
+        "",
+    ).casefold()
+
+    us_epa_signals = (
+        "u.s. environmental protection agency",
+        "us environmental protection agency",
+        "cincinnati, oh",
+        "cincinnati ohio",
+        "durham, nc",
+    )
+
+    if (
+        institution_id == GHANA_EPA_ID
+        and any(
+            signal in raw_affiliation
+            for signal in us_epa_signals
+        )
+    ):
+        return US_EPA_ID
+
+    return institution_id
 
 def deduplicate_rows(
     rows: list[dict[str, str]],
@@ -99,9 +165,7 @@ def institution_metadata(
         if not valid_institution(row):
             continue
 
-        institution_id = canonical_institution_id(
-            row["institution_id"].strip()
-        )
+        institution_id = corrected_institution_id(row)
 
         if institution_id not in metadata:
             metadata[institution_id] = {
@@ -129,7 +193,15 @@ def institution_metadata(
             metadata[institution_id]["institution_ror"] = (
                 row["institution_ror"].strip()
             )
+    for institution_id, canonical_info in (
+        CANONICAL_INSTITUTION_METADATA.items()
+    ):
+        if institution_id not in metadata:
+            continue
 
+        metadata[institution_id].update(
+            canonical_info
+        )
     return metadata
 
 def build_institution_work_sets(
@@ -152,9 +224,7 @@ def build_institution_work_sets(
         if not valid_institution(row):
             continue
 
-        institution_id = canonical_institution_id(
-        row["institution_id"].strip()
-    )
+        institution_id = corrected_institution_id(row)
         work_id = row.get("openalex_id", "").strip()
         tier = row.get("analysis_tier", "").strip()
 
@@ -318,9 +388,7 @@ def build_institution_technology_summary(
         if tier not in PRIMARY_TIERS:
             continue
 
-        institution_id = canonical_institution_id(
-            row["institution_id"].strip()
-        )
+        institution_id = corrected_institution_id(row)
         work_id = row.get("openalex_id", "").strip()
 
         for technology in parse_labels(
