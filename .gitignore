@@ -51,3 +51,11 @@ data/processed/trends/
 
 # Generated capture/destruction analysis
 data/processed/capture_destruction/
+
+# Generated institution-analysis outputs
+data/processed/institutions/
+
+# Generated OpenAlex enrichment outputs
+data/processed/openalex_authorships.csv
+data/processed/openalex_authorships_test.csv
+data/raw/openalex_work_cache/
