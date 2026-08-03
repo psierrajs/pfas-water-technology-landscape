@@ -45,3 +45,6 @@ reports/*.pdf
 data/processed/*.csv
 
 
+
+# Generated trend-analysis outputs
+data/processed/trends/
