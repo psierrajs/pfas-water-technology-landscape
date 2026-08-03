@@ -12,6 +12,11 @@ PFAS_PATTERNS = [
     r"\bPFAA(?:s)?\b",
     r"\bPFOA\b",
     r"\bPFOS\b",
+    r"\bperfluorooctanoic acid\b",
+    r"\bperfluorooctane sulfonic acid\b",
+    r"\bperfluorooctanesulfonic acid\b",
+    r"\bperfluorooctane sulfonate\b",
+    r"\bperfluorooctanesulfonate\b",
     r"\bPFBS\b",
     r"\bPFHxS\b",
     r"\bPFNA\b",
@@ -55,13 +60,66 @@ ADJACENT_MATRIX_PATTERNS = [
     r"\bsludge\b",
     r"\bbiosolid",
     r"\bsolid waste\b",
-    r"\blandfill\b",
-    r"\bAFFF\b",
-    r"\baqueous film[- ]forming foam\b",
     r"\bcontaminated material",
     r"\bspent media\b",
     r"\bspent adsorbent",
+    r"\bspent sorbent",
+    r"\bspent engineered sorbent",
+    r"\btreatment residual",
+    r"\bwater treatment residual",
 ]
+
+# These patterns indicate that a solid or residual material is
+# itself the treatment target. Generic mentions of residuals are
+# not enough because residual materials may instead be sorbents
+# used to remove PFAS from water.
+TITLE_ADJACENT_TARGET_PATTERNS = [
+    # Explicit treatment of solid or residual matrices.
+    r"\b(?:treat\w*|remediat\w*|degrad\w*|destroy\w*|"
+    r"destruction|stabili[sz]\w*|pyrolysis|"
+    r"hydrothermal liquefaction)\b"
+    r"[^\n]{0,120}\b(?:soil|sediment|sludge|biosolids?|"
+    r"solid wastes?|spent media|spent sorbents?)\b",
+
+    # Matrix first, followed by an explicit treatment action.
+    r"\b(?:soil|sediment|sludge|biosolids?|solid wastes?|"
+    r"spent media|spent sorbents?)\b"
+    r"[^\n]{0,120}\b(?:treat\w*|remediat\w*|degrad\w*|"
+    r"destroy\w*|destruction|stabili[sz]\w*|pyrolysis|"
+    r"hydrothermal liquefaction)\b",
+
+    # Reviews specifically centred on solid matrices.
+    r"\b(?:occurrence|fate|remediation|management)\b"
+    r"[^\n]{0,100}\b(?:in|of)\b"
+    r"[^\n]{0,80}\b(?:soil|sludge|biosolids?)\b",
+
+    r"\bdestruction\s+of\s+spent\s+(?:media|sorbents?)\b",
+    r"\bfate\s+of\b[^\n]{0,100}\bduring\b"
+    r"[^\n]{0,100}\bsludge\b",
+]
+
+
+# Mixed-matrix titles that explicitly include water remain relevant
+# to the core water-treatment landscape.
+TITLE_MIXED_WATER_TREATMENT_PATTERNS = [
+    r"\b(?:degradation|removal|treatment|remediation)\b"
+    r"[^\n]{0,100}\bwater and soil\b",
+    r"\bwater and soil\b[^\n]{0,100}"
+    r"\b(?:degradation|removal|treatment|remediation)\b",
+]
+
+# Titles about measurement, occurrence or management of residuals
+# are contextual rather than treatment studies.
+TITLE_RESIDUAL_CONTEXT_PATTERNS = [
+    r"\bcharacteriz\w*\b[^\n]{0,100}"
+    r"\btreatment residuals?\b",
+    r"\bconcentrations?\b[^\n]{0,100}"
+    r"\btreatment residuals?\b",
+    r"\bmanagement pathways?\b[^\n]{0,100}"
+    r"\bspent media\b",
+    r"\bspent media management\b",
+]
+
 
 TREATMENT_PATTERNS = [
     r"\btreat",
@@ -113,6 +171,11 @@ CONTEXT_PATTERNS = [
     r"\bbioaccumul",
     r"\becotoxic",
     r"\bmanagement strateg",
+    r"\bdisposal\b",
+    r"\bwaste management\b",
+    r"\blife[- ]cycle\b",
+    r"\benvironmental distribution\b",
+    r"\bsources?\b",
 ]
 
 
@@ -148,6 +211,18 @@ def classify_relevance(
         title_text,
         ADJACENT_MATRIX_PATTERNS,
     )
+    title_has_adjacent_target = matches_any(
+        title_text,
+        TITLE_ADJACENT_TARGET_PATTERNS,
+    )
+    title_has_mixed_water_treatment = matches_any(
+        title_text,
+        TITLE_MIXED_WATER_TREATMENT_PATTERNS,
+    )
+    title_has_residual_context = matches_any(
+        title_text,
+        TITLE_RESIDUAL_CONTEXT_PATTERNS,
+    )
     title_has_treatment = matches_any(
         title_text,
         TREATMENT_PATTERNS,
@@ -179,23 +254,46 @@ def classify_relevance(
     if has_context:
         signals.append("context")
 
-    if title_has_pfas and title_has_water and title_has_treatment:
-        return "water_treatment", signals
+    # Measurement or management of treatment residuals is
+    # contextual rather than direct PFAS treatment.
+    if title_has_pfas and title_has_residual_context:
+        return "contextual", signals
 
+    # Explicit mixed water-and-soil treatment remains part of the
+    # core water-treatment landscape.
     if (
         title_has_pfas
-        and title_has_adjacent_matrix
+        and title_has_mixed_water_treatment
+        and title_has_treatment
+    ):
+        return "water_treatment", signals
+
+    # Explicit solid or residual matrices in the title take
+    # precedence over incidental water-related terminology.
+    if (
+        title_has_pfas
+        and title_has_adjacent_target
         and title_has_treatment
     ):
         return "adjacent_matrix", signals
 
+    if title_has_pfas and title_has_water and title_has_treatment:
+        return "water_treatment", signals
+
+    # At full-text level, water treatment takes precedence.
+    # Abstracts often mention soil, sludge or spent media only as
+    # background, comparison matrices or downstream residuals.
     if has_pfas and has_water and has_treatment:
         return "water_treatment", signals
 
     if has_pfas and has_adjacent_matrix and has_treatment:
         return "adjacent_matrix", signals
 
-    if has_pfas and has_treatment:
+    # Use the unspecified-matrix category only when the title itself
+    # provides evidence of both PFAS and treatment. This avoids
+    # promoting contextual papers because their abstracts contain
+    # generic words such as "degradation" or "removal".
+    if title_has_pfas and title_has_treatment:
         return "treatment_unspecified_matrix", signals
 
     if has_pfas and (
