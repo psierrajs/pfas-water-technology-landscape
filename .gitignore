@@ -48,3 +48,6 @@ data/processed/*.csv
 
 # Generated trend-analysis outputs
 data/processed/trends/
+
+# Generated capture/destruction analysis
+data/processed/capture_destruction/
