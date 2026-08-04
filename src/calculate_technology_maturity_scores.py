@@ -283,7 +283,7 @@ def print_maturity_summary(
             f"{row['raw_maturity_score']:>6.2f} raw | "
             f"{row['total_unique_publications']:>3} publications | "
             f"{row['technology']}"
-        )
+        )   
 
 def main() -> None:
     """Calculate and export technology maturity scores."""
