@@ -65,3 +65,6 @@ data/processed/institution_collaborations/
 
 # Institution–technology momentum outputs
 data/processed/institution_technology_growth/
+
+# Institution–technology matrix outputs
+data/processed/institution_technology_matrix/
