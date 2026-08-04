@@ -71,3 +71,6 @@ data/processed/institution_technology_matrix/
 
 # Evidence-type classification outputs
 data/processed/evidence_type/
+
+# Evidence–technology matrix outputs
+data/processed/evidence_technology_matrix/
