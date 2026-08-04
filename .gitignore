@@ -68,3 +68,6 @@ data/processed/institution_technology_growth/
 
 # Institution–technology matrix outputs
 data/processed/institution_technology_matrix/
+
+# Evidence-type classification outputs
+data/processed/evidence_type/
