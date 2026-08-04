@@ -60,6 +60,24 @@ CANONICAL_INSTITUTION_METADATA = {
     },
 }
 
+KNOWN_INTERNAL_RELATIONSHIPS = {
+    frozenset(
+        {
+            "https://openalex.org/I19820366",
+            "https://openalex.org/I4210144289",
+        }
+    ): "parent_subunit",
+}
+
+POSSIBLE_INTERNAL_RELATIONSHIPS = {
+    frozenset(
+        {
+            "https://openalex.org/I204337017",
+            "https://openalex.org/I4405270011",
+        }
+    ): "possible_internal",
+}
+
 US_EPA_ID = "https://openalex.org/I1302368450"
 GHANA_EPA_ID = "https://openalex.org/I182185646"
 
@@ -232,7 +250,25 @@ def pair_key(
             )
         )
     )
+def classify_relationship(
+    institution_a: str,
+    institution_b: str,
+) -> str:
+    """Classify known internal and external relationships."""
+    key = frozenset(
+        {
+            institution_a,
+            institution_b,
+        }
+    )
 
+    if key in KNOWN_INTERNAL_RELATIONSHIPS:
+        return KNOWN_INTERNAL_RELATIONSHIPS[key]
+
+    if key in POSSIBLE_INTERNAL_RELATIONSHIPS:
+        return POSSIBLE_INTERNAL_RELATIONSHIPS[key]
+
+    return "external"
 
 def build_collaboration_summary(
     works: dict[str, dict[str, Any]],
@@ -323,6 +359,10 @@ def build_collaboration_summary(
                             institution_b,
                         )
                     ]
+                ),
+                "relationship_type": classify_relationship(
+                    institution_a,
+                    institution_b,
                 ),
                 "cross_country": (
                     "yes"
@@ -705,11 +745,17 @@ def print_top_collaborations(
     rows: list[dict[str, Any]],
     limit: int = 20,
 ) -> None:
-    """Print the strongest institutional pairs."""
-    print("\nTop institutional collaborations")
+    """Print the strongest external institutional pairs."""
+    print("\nTop external institutional collaborations")
     print("-" * 110)
 
-    for row in rows[:limit]:
+    external_rows = [
+        row
+        for row in rows
+        if row["relationship_type"] == "external"
+    ]
+
+    for row in external_rows[:limit]:
         print(
             f"{row['core_shared_publications']:>3} core | "
             f"{row['primary_shared_publications']:>3} primary | "
@@ -719,7 +765,6 @@ def print_top_collaborations(
             f"{row['institution_b_name']} "
             f"({row['institution_b_country']})"
         )
-
 
 def print_top_network_institutions(
     rows: list[dict[str, Any]],
@@ -813,6 +858,7 @@ def main() -> None:
             "all_shared_publications",
             "primary_shared_publications",
             "core_shared_publications",
+            "relationship_type",
             "cross_country",
         ],
     )
