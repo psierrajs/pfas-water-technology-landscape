@@ -74,3 +74,6 @@ data/processed/evidence_type/
 
 # Evidence–technology matrix outputs
 data/processed/evidence_technology_matrix/
+
+# Technology maturity outputs
+data/processed/technology_maturity/
