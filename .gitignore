@@ -62,3 +62,6 @@ data/raw/openalex_work_cache/
 
 # Generated institution collaboration outputs
 data/processed/institution_collaborations/
+
+# Institution–technology momentum outputs
+data/processed/institution_technology_growth/
