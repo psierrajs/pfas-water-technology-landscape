@@ -77,3 +77,6 @@ data/processed/evidence_technology_matrix/
 
 # Technology maturity outputs
 data/processed/technology_maturity/
+
+# High-maturity validation outputs
+data/processed/high_maturity_validation/
