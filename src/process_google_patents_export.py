@@ -1,31 +1,69 @@
 from __future__ import annotations
 
+import argparse
 import csv
 from pathlib import Path
 from typing import Any
 
 
-INPUT_PATH = Path(
+DEFAULT_INPUT_PATH = Path(
     "data/raw/patents/"
     "pat_eox_001_google_patents.csv"
 )
 
-OUTPUT_DIR = Path(
+DEFAULT_OUTPUT_PATH = Path(
     "data/processed/patents/"
-    "pat_eox_001"
+    "pat_eox_001/"
+    "pat_eox_001_processed.csv"
 )
 
-OUTPUT_PATH = (
-    OUTPUT_DIR
-    / "pat_eox_001_processed.csv"
+DEFAULT_QUERY_ID = "PAT-EOX-001"
+
+DEFAULT_TECHNOLOGY_LABEL = (
+    "electrochemical_oxidation"
 )
 
-QUERY_ID = "PAT-EOX-001"
-TECHNOLOGY_LABEL = "electrochemical_oxidation"
+def parse_arguments() -> argparse.Namespace:
+    """Parse command-line options for a patent export."""
+    parser = argparse.ArgumentParser(
+        description=(
+            "Process a Google Patents CSV export."
+        )
+    )
 
-def read_google_patents_rows() -> list[dict[str, str]]:
+    parser.add_argument(
+        "--input",
+        type=Path,
+        default=DEFAULT_INPUT_PATH,
+        help="Path to the raw Google Patents CSV export.",
+    )
+
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=DEFAULT_OUTPUT_PATH,
+        help="Path for the processed CSV output.",
+    )
+
+    parser.add_argument(
+        "--query-id",
+        default=DEFAULT_QUERY_ID,
+        help="Stable identifier for the patent search.",
+    )
+
+    parser.add_argument(
+        "--technology-label",
+        default=DEFAULT_TECHNOLOGY_LABEL,
+        help="Technology label assigned to each record.",
+    )
+
+    return parser.parse_args()
+    
+def read_google_patents_rows(
+    input_path: Path,
+) -> list[dict[str, str]]:
     """Read a Google Patents CSV export with a metadata first line."""
-    with INPUT_PATH.open(
+    with input_path.open(
         encoding="utf-8-sig",
         newline="",
     ) as file:
@@ -43,6 +81,8 @@ def normalize_text(
 
 def build_processed_rows(
     rows: list[dict[str, str]],
+    query_id: str,
+    technology_label: str,
 ) -> list[dict[str, Any]]:
     """Convert raw Google Patents rows into a normalized pilot dataset."""
     processed_rows: list[dict[str, Any]] = []
@@ -60,7 +100,7 @@ def build_processed_rows(
 
         processed_rows.append(
             {
-                "query_id": QUERY_ID,
+                "query_id": query_id,
                 "publication_id": publication_id,
                 "title": normalize_text(
                     row.get(
@@ -110,7 +150,7 @@ def build_processed_rows(
                         "",
                     )
                 ),
-                "technology_labels": TECHNOLOGY_LABEL,
+                "technology_labels": technology_label,
                 "relevance_label": "",
                 "family_group": "",
                 "manual_review_notes": "",
@@ -135,9 +175,10 @@ def sort_processed_rows(
 
 def write_processed_csv(
     rows: list[dict[str, Any]],
+    output_path: Path,
 ) -> Path:
     """Write the normalized patent pilot dataset."""
-    OUTPUT_DIR.mkdir(
+    output_path.parent.mkdir(
         parents=True,
         exist_ok=True,
     )
@@ -159,7 +200,7 @@ def write_processed_csv(
         "manual_review_notes",
     ]
 
-    with OUTPUT_PATH.open(
+    with output_path.open(
         "w",
         encoding="utf-8",
         newline="",
@@ -171,8 +212,7 @@ def write_processed_csv(
         writer.writeheader()
         writer.writerows(rows)
 
-    return OUTPUT_PATH
-
+    return output_path
 def print_processing_summary(
     raw_rows: list[dict[str, str]],
     processed_rows: list[dict[str, Any]],
@@ -209,11 +249,17 @@ def print_processing_summary(
 
 
 def main() -> None:
-    """Process the Google Patents pilot export."""
-    raw_rows = read_google_patents_rows()
+    """Process a Google Patents export."""
+    args = parse_arguments()
+
+    raw_rows = read_google_patents_rows(
+        args.input
+    )
 
     processed_rows = build_processed_rows(
-        raw_rows
+        raw_rows,
+        args.query_id,
+        args.technology_label,
     )
 
     processed_rows = sort_processed_rows(
@@ -221,7 +267,8 @@ def main() -> None:
     )
 
     output_path = write_processed_csv(
-        processed_rows
+        processed_rows,
+        args.output,
     )
 
     print_processing_summary(
@@ -229,6 +276,13 @@ def main() -> None:
         processed_rows,
     )
 
+    print(
+        f"Query ID: {args.query_id}"
+    )
+    print(
+        "Technology label: "
+        f"{args.technology_label}"
+    )
     print(
         f"Output written to: {output_path}"
     )
