@@ -6,7 +6,7 @@ from pathlib import Path
 
 INPUT_PATH = Path(
     "data/processed/patents/pat_ads_001a/"
-    "pat_ads_001a_consolidated_screening.csv"
+    "pat_ads_001a_consolidated_screening_corrected.csv"
 )
 
 OUTPUT_PATH = Path(
