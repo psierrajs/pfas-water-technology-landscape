@@ -61,7 +61,7 @@ def format_counter(
         f"- {format_label(label)}: {count}"
         for label, count in counts.most_common()
     ]
-    
+        
 def build_core_counts(
     rows: list[dict[str, str]],
 ) -> dict[str, Counter[str]]:
