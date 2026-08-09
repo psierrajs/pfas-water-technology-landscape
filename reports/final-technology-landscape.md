@@ -690,7 +690,166 @@ This architecture reconciles the strengths and limitations of both mature captur
 It also provides a useful framework for interpreting the strongest signals identified across the scientific and patent landscapes.
 ## 8. Strategic Findings
 
-_To be completed after synthesis of the scientific and patent evidence._
+The combined scientific, patent, maturity and institutional evidence supports several strategic conclusions about the PFAS water-treatment landscape.
+
+### 8.1 The market is unlikely to converge on a single treatment technology
+
+No technology identified in the landscape provides an obvious universal solution across all PFAS-contaminated water streams.
+
+The evidence instead points toward specialization by treatment role.
+
+Activated carbon and ion exchange are strong capture technologies for treating relatively large water volumes.
+
+Destructive technologies such as electrochemical oxidation, supercritical water oxidation and plasma are more attractive when PFAS has already been concentrated into a smaller stream.
+
+This makes treatment-system design more important than identifying a single technically superior process.
+
+### 8.2 Capture remains dominant, but capture alone is increasingly insufficient
+
+Adsorption is the largest scientific technology category and remains dominant in the activated-carbon and ion-exchange patent portfolios.
+
+This reflects the practical maturity of capture technologies.
+
+However, capture transfers PFAS from one medium to another.
+
+Spent carbon, exhausted resin and regeneration waste therefore become secondary PFAS-containing streams that require further management.
+
+Scientific and patent activity increasingly addresses this limitation through:
+
+- regeneration;
+- PFAS concentration;
+- treatment trains;
+- capture-and-destroy configurations;
+- destruction of regeneration residuals.
+
+The strategic innovation opportunity is therefore shifting from removal alone toward management of the complete PFAS treatment cycle.
+
+### 8.3 Capture → concentrate → destroy is the strongest emerging system architecture
+
+The most consistent cross-cutting signal in the landscape is the emergence of integrated treatment architectures.
+
+A likely future configuration is:
+
+1. capture PFAS from a large volume of contaminated water;
+2. concentrate the contaminants into a smaller stream;
+3. regenerate or recover the capture medium where possible;
+4. destroy the concentrated PFAS using an energy-intensive destructive technology.
+
+This architecture allows mature capture technologies and emerging destruction technologies to complement rather than replace one another.
+
+Ion exchange coupled with electrochemical oxidation provides one of the clearest existing examples.
+
+Activated-carbon regeneration followed by treatment of concentrated residuals represents another potential pathway.
+
+### 8.4 Electrochemical oxidation is one of the strongest near-term destruction candidates
+
+Electrochemical oxidation combines several positive signals:
+
+- sustained scientific growth;
+- pilot-scale evidence;
+- field-demonstration evidence in an integrated treatment system;
+- recent patent activity;
+- participation from both universities and commercial water-treatment organizations.
+
+Its strategic advantage is that it can potentially operate on concentrated PFAS streams produced by upstream separation technologies.
+
+The technology still faces engineering and cost constraints, but it currently shows one of the strongest science-to-application trajectories among destructive approaches.
+
+### 8.5 Supercritical water oxidation shows unusually strong application signals
+
+Supercritical water oxidation has a smaller scientific base than electrochemical oxidation or adsorption, but its maturity signal is disproportionately strong.
+
+Battelle's publication sequence progresses from aqueous treatment to field demonstration and site-specific deployment.
+
+This suggests that publication volume alone would underestimate the strategic relevance of the technology.
+
+SCWO should therefore be monitored as a high-priority destructive-treatment pathway, particularly for concentrated PFAS wastes and difficult residual matrices.
+
+### 8.6 Activated carbon remains strategically important despite being established
+
+Activated carbon is not simply a mature technology with limited innovation potential.
+
+Its patent landscape demonstrates continued activity around:
+
+- modified carbon materials;
+- improved adsorption;
+- regeneration;
+- modular treatment;
+- in-situ remediation;
+- combined systems.
+
+Its installed familiarity and deployment maturity may also make it an important front-end technology in future integrated treatment trains.
+
+The most important innovation opportunity is therefore likely to lie in extending activated carbon beyond single-use capture.
+
+### 8.7 Ion exchange is strategically valuable as a selective concentration technology
+
+Ion exchange should not be evaluated only as a competitor to activated carbon.
+
+Its selectivity and regeneration potential give it a potentially important role as a PFAS concentration platform.
+
+The patent landscape supports this interpretation through activity around:
+
+- selective resins;
+- modified and functionalized resins;
+- regeneration systems;
+- capture-and-destroy configurations.
+
+This creates a particularly strong fit with downstream destructive processes.
+
+### 8.8 Institutional signals matter more than publication rankings alone
+
+Several of the strongest technology signals emerged only after combining publication trends with institutional continuity, collaboration and maturity evidence.
+
+Examples include:
+
+- Battelle in supercritical water oxidation;
+- University of Georgia in electrochemical oxidation and combined treatment;
+- University of Surrey and Arcadis in sonolysis;
+- Rice University in photocatalytic capture-and-destroy materials;
+- Colorado School of Mines, Arizona State University and CDM Smith in applied PFAS treatment networks.
+
+These examples show why technology intelligence benefits from tracking research programmes rather than simply counting papers.
+
+### 8.9 Public–private and regulatory networks are important to commercialization
+
+The scientific collaboration network includes engineering companies, universities and environmental agencies.
+
+Repeated links involving organizations such as:
+
+- Arcadis;
+- CDM Smith;
+- U.S. Environmental Protection Agency;
+- state environmental agencies;
+- CSIRO;
+
+suggest that part of the PFAS innovation ecosystem is already closely connected to implementation and regulation.
+
+This is particularly important for PFAS because deployment is likely to be strongly influenced by regulatory limits, remediation requirements and public-sector procurement.
+
+### 8.10 The most attractive monitoring targets combine several independent signals
+
+A technology or organization becomes strategically more interesting when multiple evidence streams align.
+
+High-priority monitoring candidates should therefore combine several of the following:
+
+- increasing scientific activity;
+- coherent institutional programmes;
+- patent activity;
+- pilot or field demonstrations;
+- commercial or engineering participation;
+- integration into treatment trains;
+- movement toward destruction rather than capture alone.
+
+On this basis, particularly important technology areas for continued monitoring include:
+
+- electrochemical oxidation;
+- supercritical water oxidation;
+- advanced activated-carbon systems;
+- selective and regenerable ion-exchange systems;
+- integrated capture-and-destroy treatment trains.
+
+The strongest opportunity identified by the landscape is not a single treatment technology, but the engineering integration of mature separation technologies with increasingly credible PFAS destruction processes.
 
 ## 9. Limitations
 
