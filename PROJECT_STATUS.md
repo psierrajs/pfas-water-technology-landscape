@@ -2,129 +2,185 @@
 
 ## Current phase
 
-Scientific literature search validation and OpenAlex recall testing.
+Portfolio packaging and final project review.
 
 ## Overall status
 
-In progress.
+Core analysis complete. Portfolio preparation in progress.
 
 ## Completed
 
-* Created the local project repository.
-* Initialised Git using `main` as the default branch.
-* Created the initial `.gitignore`.
-* Created the initial project documentation files.
-* Defined the primary research question.
-* Defined the secondary intelligence questions.
-* Documented the initial technology taxonomy.
-* Defined the geographic and time scope.
-* Documented the initial methodology.
-* Defined initial inclusion and exclusion criteria.
-* Documented copyright, licensing and confidentiality precautions.
-* Created the initial repository directory structure.
-* Added placeholder files to preserve empty directories in Git.
-* Created placeholder files for the scientific literature and patent search strategies.
-* Documented the initial scientific literature search strategy.
-* Defined the initial PFAS, water and treatment concept blocks.
-* Identified preliminary technology-specific search terminology.
-* Performed a pilot search using the OpenAlex web interface.
-* Reviewed an initial sample of search results.
-* Defined preliminary publication-screening categories.
-* Refined the initial inclusion and exclusion decisions.
-* Created a Python virtual environment for the project.
-* Added `requests` as the first project dependency.
-* Created `requirements.txt` and `.env.example`.
-* Configured the OpenAlex API key locally without exposing it to Git.
-* Created the first reproducible OpenAlex query script.
-* Successfully retrieved and screened an initial sample of ten records.
-* Documented the initial OpenAlex API test and its screening results.
-* Created an initial scientific literature reference set.
-* Classified ten relevant publications by technology category.
-* Added independently discovered membrane and photocatalysis references.
-* Created a reusable DOI-based recall-checking script.
-* Confirmed that the membrane reference appears at position 64.
-* Confirmed that the photocatalysis reference appears at position 113.
-* Documented the effect of ranking on apparent search recall.
-* Added an independent sonolysis reference to the scientific literature reference set.
-* Confirmed that the sonolysis reference was not found within the first 500 results of the broad query.
-* Confirmed that the same reference appeared at position 8 in a technology-specific sonolysis query.
-* Identified a practical recall gap in the single-query search design.
-* Added an independent supercritical water oxidation reference.
-* Confirmed retrieval at position 52 in the broad query and position 1 in the technology-specific query.
-* Fixed case-sensitive DOI comparison in the recall-testing script.
-* Added an independent catalyzed hydrothermal liquefaction reference.
-* Confirmed that it was not found within the first 500 broad-query results.
-* Confirmed retrieval at position 3 in the technology-specific query.
-* Added an independent combined adsorption and electrochemical oxidation reference.
-* Confirmed that it was not retrieved within the first 500 broad-query results.
-* Confirmed retrieval at position 28 in the technology-specific query.
-* Completed initial recall testing across the main missing technology categories.
+### Project design and methodology
 
-## Current files
+- Defined the primary research question and secondary intelligence questions.
+- Defined the geographic and time scope.
+- Documented the initial technology taxonomy.
+- Defined inclusion and exclusion criteria.
+- Documented the exploratory methodology.
+- Documented copyright, licensing and confidentiality precautions.
+- Created the reproducible repository structure.
+- Configured Git and GitHub version control.
+- Created the Python environment and project dependencies.
 
-* `README.md`
-* `PROJECT_STATUS.md`
-* `research-question.md`
-* `methodology.md`
-* `.gitignore`
-* `.env.example`
-* `requirements.txt`
-* `search-strategies/scientific-literature.md`
-* `search-strategies/reference-set.md`
-* `search-strategies/patents.md`
-* `src/search_openalex.py`
-* `src/check_reference_recall.py`
-* `data/raw/`
-* `data/processed/`
-* `notebooks/`
-* `src/`
-* `figures/`
-* `reports/`
+### Scientific literature analysis
+
+- Designed and documented the OpenAlex scientific-literature search strategy.
+- Tested broad and technology-specific retrieval approaches.
+- Built a reference set for recall testing.
+- Implemented DOI-based recall validation.
+- Identified recall gaps in single broad-query retrieval.
+- Combined broad and technology-specific searches.
+- Created a deduplicated analysis-ready scientific corpus.
+- Produced a final corpus of 658 records covering 2018–2026.
+- Classified records by relevance and technology.
+- Analysed annual publication growth.
+- Analysed technology-specific momentum.
+- Analysed institution–technology momentum.
+- Enriched authorship and institutional metadata.
+- Corrected institutional aliases and affiliation-resolution errors.
+- Analysed institutional and international collaboration networks.
+- Classified evidence type and maturity.
+- Manually validated high-maturity pilot, field and full-scale records.
+
+### Patent intelligence
+
+#### Activated carbon
+
+- Performed and documented a Google Patents pilot search.
+- Screened 67 publication records.
+- Consolidated records into 45 patent families.
+- Performed manual family-quality assurance.
+- Retained 25 relevant patent families.
+- Classified treatment mode, carbon type, PFAS handling, system configuration, maturity and strategic theme.
+- Generated activated-carbon patent intelligence reports and figures.
+
+#### Ion exchange
+
+- Designed and documented a PATENTSCOPE search strategy.
+- Exported and processed 49 patent records.
+- Completed title and IPC screening.
+- Reviewed uncertain records.
+- Consolidated the final screening decisions.
+- Produced a provisional family-level dataset.
+- Retained 17 relevant patent families.
+- Classified treatment mode and resin strategy.
+- Generated the ion-exchange patent intelligence report.
+
+#### Electrochemical oxidation
+
+- Completed an electrochemical-oxidation patent pilot.
+- Screened 22 patent publications.
+- Retained 15 relevant patent families.
+- Identified recent priority-date activity.
+- Identified academic and commercial assignees.
+- Generated the electrochemical-oxidation patent pilot report.
+
+### Cross-technology analysis
+
+- Compared activated-carbon and ion-exchange patent portfolios.
+- Compared treatment modes across technologies.
+- Integrated scientific-publication and patent-family signals.
+- Created a science–patent comparison figure.
+- Identified capture, regeneration, concentration and destruction patterns across technologies.
+
+### Technology assessment and strategic intelligence
+
+- Assessed the scientific and applied position of:
+  - activated carbon;
+  - ion exchange;
+  - electrochemical oxidation;
+  - hydrothermal treatment;
+  - supercritical water oxidation;
+  - plasma;
+  - photocatalysis;
+  - sonolysis;
+  - biological treatment.
+- Identified institutional programmes with coherent science-to-application trajectories.
+- Identified public-sector, academic and engineering collaboration signals.
+- Developed the strategic treatment architecture:
+
+  **capture → concentrate → regenerate where possible → destroy**
+
+### Reporting and reproducibility
+
+- Created intermediate reports for the principal analytical stages.
+- Generated reproducible figures from processed datasets.
+- Completed a first full version of the final technology landscape report.
+- Added:
+  - Executive Summary;
+  - Scientific Landscape;
+  - Patent Landscape;
+  - Cross-Technology Patent Comparison;
+  - Science–Patent Integration;
+  - Technology Assessment;
+  - Strategic Findings;
+  - Limitations;
+  - Conclusions;
+  - Reproducibility.
+- Completed an editorial and terminology review of the final report.
+- Updated the README to present the project as a portfolio-ready intelligence project.
+
+## Key outputs
+
+- `README.md`
+- `reports/final-technology-landscape.md`
+- `reports/publication-trends-initial-findings.md`
+- `reports/technology-growth-initial-findings.md`
+- `reports/institution-technology-momentum-initial-findings.md`
+- `reports/institutional-collaboration-initial-findings.md`
+- `reports/high-maturity-validation-summary.md`
+- `reports/patent-adsorption-pilot-summary.md`
+- `reports/patent-adsorption-intelligence-summary.md`
+- `reports/patent-ion-exchange-intelligence-summary.md`
+- `reports/patent-eox-pilot-summary.md`
+- `reports/patent-technology-comparison.md`
+- `reports/science-patent-technology-comparison.md`
+- `figures/patent_adsorption_strategic_themes.png`
+- `figures/science_patent_technology_comparison.png`
+- documented scientific and patent search strategies
+- reusable Python scripts in `src/`
 
 ## Current methodological decisions
 
-* The study is exploratory rather than exhaustive.
-* The primary analysis period is 2018–2026.
-* Coverage is global, with particular attention to Europe, the United States and Canada.
-* Evidence will be gathered from scientific publications, patents, corporate sources, research projects and business news.
-* Capture and destruction technologies will be distinguished.
-* Interpretable intelligence analysis will be prioritised before machine learning, RAG or LLM workflows.
-* Restricted raw data and licensed database exports will not be published on GitHub.
-* Review articles will be retained and classified separately from experimental studies.
-* Studies of degradation products will be included when they directly evaluate a treatment process.
-* Analytical and monitoring studies without a treatment component will normally be excluded.
-* Broad retrieval followed by title and abstract screening is preferred over aggressive query exclusions.
-* API credentials will be stored only in the local `.env` file.
-* Initial OpenAlex queries will retrieve small samples before any large-scale collection.
-* Search performance will be assessed using both precision and recall.
-* Known relevant records will be used to test whether the query misses important technologies.
-* Recall testing will use DOI-based validation and paginated result inspection.
-* Small result samples are not sufficient to judge technology coverage because relevant records may rank substantially lower.
-* Technology-specific searches will be used to identify underrepresented categories and strengthen the reference set.
-* The literature search will combine one broad query with technology-specific queries.
-* Technology-specific queries are required where the broad query shows inadequate practical recall.
-* Results from multiple queries will need DOI-based or OpenAlex-ID-based deduplication.
+- The project is an exploratory technology-intelligence landscape rather than an exhaustive systematic review.
+- The primary scientific-analysis period is 2018–2026.
+- Coverage is global, with emphasis on Europe and North America.
+- Scientific publications and patents form the main evidence base of the current version.
+- Corporate, market and business intelligence are considered future extensions rather than fully completed evidence streams.
+- Capture and destruction technologies are analysed separately where possible.
+- Technology categories may overlap.
+- Interpretable and reproducible analysis is prioritised over opaque scoring.
+- Publication counts, patent-family counts and maturity signals are interpreted as complementary rather than directly equivalent indicators.
+- Patent searches are technology-specific pilots and should not be treated as exhaustive freedom-to-operate analyses.
+- Manual validation is used where automated classification is insufficient.
+- Restricted or licensed raw data are not committed to the public repository.
+- Python scripts are preferred over manual editing for derived analytical outputs.
+
+## Remaining work before portfolio v1.0
+
+- Create a one-page executive brief.
+- Review `PROJECT_STATUS.md`, README and repository navigation as a first-time GitHub visitor.
+- Verify that key reports, figures and search strategies are easy to locate.
+- Perform a final repository-level quality check.
+- Optionally add a compact technology-comparison table or visual summary if it improves readability.
+- Tag or otherwise mark the first portfolio-ready release.
+
+## Future extensions
+
+Potential future work includes:
+
+- additional patent landscapes for membranes, plasma, SCWO or other technologies;
+- systematic commercial and company intelligence;
+- funding, partnership and procurement analysis;
+- automated monitoring of new publications and patents;
+- organization and technology change detection;
+- reusable competitive-intelligence dashboards;
+- extension of the workflow to other scientific and industrial technology landscapes.
 
 ## Next step
 
-Review the complete reference-set recall results and design the first reproducible set of broad and technology-specific OpenAlex queries.
-
-## Known issues and open questions
-
-* The provisional technology taxonomy will need validation against the terminology found in the literature and patents.
-* The exact fields for the processed dataset have not yet been finalised.
-* Patent family handling and organisation-name normalisation methods still need to be defined.
-* Public data-source licences and redistribution conditions must be reviewed before publishing datasets.
-* The distinction between analytical studies and treatment-performance studies may require manual judgement.
-* The OpenAlex query syntax and metadata fields still need further testing.
-* The reference set remains small and is not statistically representative.
-* Several destructive and combined technology categories remain absent from the reference set.
-* The first search script prints records but does not yet save structured metadata.
-* Error handling and query configuration will need improvement before larger retrievals.
-* Ranking differences may bias conclusions if only small result windows are analysed.
-* The number and scope of technology-specific queries still need to be defined.
-* A reproducible deduplication method will be required when combining query results.
+Create the one-page executive brief and complete final portfolio packaging.
 
 ## Last updated
 
-2026-08-01
+2026-08-09
