@@ -853,17 +853,140 @@ The strongest opportunity identified by the landscape is not a single treatment 
 
 ## 9. Limitations
 
-Key limitations to document include:
+This landscape is intended as a technology-intelligence assessment rather than an exhaustive systematic review, freedom-to-operate analysis or commercial due-diligence study.
 
-- differences between scientific and patent search strategies;
-- incomplete equivalence between scientific and patent technology taxonomies;
-- patent-family grouping based partly on provisional rules;
-- uneven metadata availability across sources;
-- directional rather than exhaustive patent coverage.
+Several limitations should therefore be considered when interpreting the findings.
+
+### 9.1 Scientific-literature coverage
+
+The scientific analysis is based on a retrieved and classified OpenAlex corpus rather than the complete global PFAS literature.
+
+Search recall may vary by terminology, indexing practice and publication type.
+
+Technology categories are not mutually exclusive, and one publication may contribute to several technology classes.
+
+Recent publication years may also be affected by indexing delays, while 2026 is incomplete.
+
+### 9.2 Classification uncertainty
+
+Technology, evidence-type and maturity labels were generated using rule-based classification workflows.
+
+These rules improve reproducibility but cannot capture every nuance of individual publications.
+
+Selected high-maturity records were manually validated, but the complete corpus was not manually reviewed record by record.
+
+### 9.3 Institutional metadata
+
+Institutional and collaboration analyses depend on OpenAlex affiliation metadata.
+
+Several confirmed mapping problems were corrected, including duplicated organizations and incorrect institution resolution, but residual errors may remain.
+
+Co-authorship should also be interpreted as evidence of a publication relationship rather than proof of a formal strategic partnership.
+
+Institution-level publication counts are often small, so apparent momentum may be sensitive to a small number of papers.
+
+### 9.4 Patent coverage
+
+The patent analysis uses technology-specific pilot searches rather than a single exhaustive global patent search.
+
+Activated carbon, ion exchange and electrochemical oxidation were searched using different workflows and, in some cases, different patent platforms.
+
+Absolute patent-family counts should therefore not be interpreted as directly comparable measures of commercial activity.
+
+Patent-family grouping was partly provisional and required manual quality control for selected records.
+
+The analysis also does not assess:
+
+- claim scope;
+- legal status;
+- freedom to operate;
+- patent validity;
+- ownership changes;
+- licensing status.
+
+### 9.5 Science–patent comparison
+
+Scientific-publication counts and patent-family counts are fundamentally different indicators.
+
+They differ in purpose, time lag, search coverage and classification structure.
+
+The science–patent comparison should therefore be interpreted directionally rather than as a quantitative commercialization metric.
+
+### 9.6 Commercial and market evidence
+
+The current project focuses primarily on scientific and patent intelligence.
+
+Commercial activity, revenue, installed treatment capacity, procurement data, funding rounds, technology licensing and company partnerships have not yet been analysed systematically.
+
+Organizations identified as strategically important should therefore be treated as candidates for further competitive-intelligence analysis rather than as definitive market leaders.
+
+### 9.7 Technology maturity
+
+Maturity is context dependent.
+
+A technology demonstrated successfully on a concentrated residual stream may not be suitable for direct treatment of large drinking-water volumes.
+
+Similarly, laboratory destruction efficiency does not necessarily imply economic or operational scalability.
+
+Technology readiness should therefore be interpreted together with:
+
+- target matrix;
+- PFAS concentration;
+- treatment throughput;
+- energy demand;
+- residual-stream generation;
+- operational complexity.
 
 ## 10. Conclusions
 
-_To be completed._
+The PFAS water-treatment landscape is characterized by rapid scientific growth, continued innovation in established capture technologies and increasing development of destructive treatment processes.
+
+No single technology emerges as a universal solution.
+
+Instead, the evidence supports a treatment landscape in which different technologies perform complementary roles.
+
+Activated carbon remains the most mature and broadly represented capture platform in the current analysis. It combines strong scientific activity, full-scale deployment evidence and a diversified patent portfolio.
+
+Ion exchange also shows substantial scientific maturity and appears particularly valuable where selective PFAS capture and concentration are required. Regeneration and selective-resin development are important innovation themes.
+
+Among destructive technologies, electrochemical oxidation shows one of the strongest combinations of scientific momentum, patent activity and applied evidence.
+
+Supercritical water oxidation is also strategically significant. Its scientific base is smaller, but field-demonstration and site-specific deployment signals indicate unusually strong maturity relative to publication volume.
+
+Plasma, photocatalysis, sonolysis, hydrothermal treatment and biological approaches contribute additional technological options with different levels of maturity and specialization.
+
+The strongest cross-cutting finding is the increasing importance of integrated treatment architectures.
+
+The emerging model is:
+
+**capture → concentrate → regenerate where possible → destroy**
+
+This architecture addresses a central limitation of conventional PFAS treatment: removal from water does not eliminate the contaminant.
+
+The most promising innovation pathways therefore combine mature separation technologies with increasingly credible destructive processes.
+
+Institutional evidence reinforces this conclusion. Several of the strongest signals occur where sustained scientific programmes, collaboration networks and applied-development evidence align.
+
+Notable examples include:
+
+- Battelle in supercritical water oxidation;
+- University of Georgia in electrochemical oxidation and combined treatment;
+- University of Surrey and Arcadis in sonolysis;
+- Rice University in integrated photocatalytic capture and degradation;
+- Colorado School of Mines, Arizona State University and CDM Smith in applied PFAS treatment networks.
+
+The landscape therefore suggests that future competitive advantage is likely to depend not only on possessing an effective individual treatment technology, but on the ability to integrate technologies into robust, scalable treatment systems.
+
+For continued technology intelligence, the highest-priority areas to monitor are:
+
+- electrochemical oxidation;
+- supercritical water oxidation;
+- advanced and regenerable activated-carbon systems;
+- selective and regenerable ion-exchange resins;
+- integrated capture-and-destroy treatment trains;
+- organizations moving from laboratory research toward field deployment.
+
+The project provides a reproducible framework for continuing that monitoring as new scientific publications, patents and deployment signals emerge.
 
 ## 11. Reproducibility
 
