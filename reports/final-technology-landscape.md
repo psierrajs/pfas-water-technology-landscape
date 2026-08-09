@@ -485,20 +485,209 @@ Patent coverage also differs by search source and workflow.
 The comparison should therefore be interpreted as directional technology-intelligence evidence rather than as a quantitative measure of commercialization probability or market maturity.
 ## 7. Technology Assessment
 
-_To be completed._
+The combined scientific, patent and maturity evidence indicates that PFAS water-treatment technologies occupy different positions along the pathway from research activity to practical deployment.
 
-Potential dimensions:
+The assessment below considers five dimensions:
 
-- scientific activity;
+- scientific activity and momentum;
 - patent activity;
-- maturity;
-- deployment evidence;
-- capture versus destruction;
-- regeneration potential;
-- treatment-train integration;
-- scalability;
-- strategic differentiation.
+- maturity and deployment evidence;
+- capture versus destruction capability;
+- potential for integration into treatment trains.
 
+The objective is not to identify a single universally superior technology. PFAS-contaminated streams differ substantially in concentration, composition, matrix and treatment requirements. The more relevant question is where each technology appears strongest and how it may contribute to an integrated treatment architecture.
+
+### 7.1 Activated carbon — established capture platform
+
+Activated carbon is the strongest mature capture technology identified in the current landscape.
+
+Scientific evidence is extensive. Adsorption is the largest category in the OpenAlex corpus, and activated-carbon-specific publications form a substantial subset of this activity.
+
+The maturity evidence is also strong. The manually validated scientific dataset includes full-scale granular activated-carbon operation in drinking-water treatment as well as pilot-scale studies.
+
+Patent activity is broad and diversified, with innovation extending beyond conventional adsorption into:
+
+- modified and enhanced carbon materials;
+- filters and water-treatment systems;
+- regeneration;
+- mobile treatment;
+- in-situ applications;
+- combined treatment trains;
+- capture-and-destroy configurations.
+
+The principal limitation remains fundamental to adsorption: PFAS is transferred from water into another medium rather than intrinsically destroyed.
+
+For this reason, the most strategically significant activated-carbon innovations are increasingly associated with regeneration, residual-stream management and integration with destructive processes.
+
+**Assessment:** high maturity, strong scientific and patent activity, high deployment potential, but primarily a capture technology.
+
+### 7.2 Ion exchange — selective capture and concentration platform
+
+Ion exchange also shows strong evidence of technical maturity and scientific relevance.
+
+Scientific activity is substantial, with 53 classified publications in the current corpus and validated pilot-scale evidence.
+
+Ion exchange also appears in a confirmed field demonstration when coupled with electrochemical oxidation for PFAS treatment in groundwater.
+
+The patent portfolio is smaller than that of activated carbon but contains clear innovation themes around:
+
+- selective resins;
+- functionalized materials;
+- amine-based resins;
+- regeneration;
+- capture-and-destroy systems.
+
+Its ability to selectively concentrate PFAS makes ion exchange particularly important within treatment trains.
+
+Rather than viewing ion exchange only as an alternative to activated carbon, the integrated evidence suggests another strategic role: concentrating PFAS into a smaller residual stream that can subsequently be treated using destructive technologies.
+
+**Assessment:** relatively mature capture technology with strong potential as a selective concentration step in integrated treatment systems.
+
+### 7.3 Electrochemical oxidation — advancing destructive technology
+
+Electrochemical oxidation has one of the strongest combinations of scientific momentum and emerging patent activity among destructive approaches.
+
+Scientific publications increased substantially between the early and recent study periods, while activity remained relatively high throughout 2023–2025.
+
+The maturity evidence includes:
+
+- pilot-scale PFAS treatment;
+- laboratory-to-pilot studies;
+- a confirmed field demonstration when combined with ion exchange.
+
+Patent activity is also increasingly recent. A large share of the retained electrochemical patent families have priority dates from 2024 onward.
+
+The technology is particularly significant because it addresses concentrated PFAS streams rather than merely transferring contaminants between media.
+
+Its strongest strategic position may therefore be downstream of capture technologies, where PFAS has already been concentrated using ion exchange, activated carbon regeneration or other separation processes.
+
+**Assessment:** strong emerging destruction technology with meaningful pilot and field evidence and particularly high relevance to capture-and-destroy treatment trains.
+
+### 7.4 Hydrothermal and supercritical-water treatment — rapidly emerging destruction pathway
+
+Hydrothermal treatment shows one of the strongest recent scientific-growth signals in the landscape.
+
+Publication activity increased sharply between the early and recent analysis periods, reaching its highest annual count in 2025.
+
+Supercritical water oxidation represents a particularly important subset of this broader direction.
+
+Although its scientific publication volume remains smaller than adsorption or electrochemical oxidation, the technology shows unusually strong maturity signals relative to its publication base.
+
+Battelle provides the clearest example. Its publication sequence progresses from aqueous-matrix treatment to field demonstration and site-specific deployment.
+
+The technology appears especially relevant for concentrated PFAS streams and difficult residual matrices.
+
+The main uncertainties concern engineering complexity, energy requirements, operating conditions and scalability across different treatment contexts.
+
+**Assessment:** high strategic interest as an emerging destruction technology, with comparatively strong field evidence but a smaller scientific base than established capture technologies.
+
+### 7.5 Plasma — promising destructive treatment with pilot evidence
+
+Plasma treatment occupies a smaller scientific niche than adsorption or electrochemical oxidation but has persistent research activity and confirmed pilot-scale evidence.
+
+A manually validated 2019 study demonstrates treatment of PFAS-containing investigation-derived waste in a pilot-scale plasma reactor.
+
+This makes plasma notable because many emerging destructive technologies remain predominantly laboratory based.
+
+The scientific corpus shows continuing activity through 2026, although publication volume remains moderate.
+
+Further assessment would require stronger evidence regarding:
+
+- energy efficiency;
+- treatment throughput;
+- reactor scalability;
+- performance across complex water matrices;
+- formation of transformation products.
+
+**Assessment:** promising destructive technology with genuine pilot evidence, but with deployment and scale-up questions that remain less resolved than for established capture systems.
+
+### 7.6 Photocatalysis — scientifically active materials-driven pathway
+
+Photocatalysis is one of the largest destructive technology categories in the scientific corpus.
+
+The field has generated substantial materials-development activity, including work on boron nitride, titanium oxide and other catalytic systems.
+
+Rice University provides a particularly coherent development trajectory from proof-of-concept degradation toward complex water matrices and integrated selective capture–photocatalytic destruction.
+
+However, publication activity declined from its 2022 peak in the current corpus.
+
+The principal challenge is translating materials-level performance into scalable water-treatment systems under realistic operating conditions.
+
+**Assessment:** scientifically mature research field with strong materials innovation, but less evidence of deployment than electrochemical oxidation or supercritical water oxidation.
+
+### 7.7 Sonolysis — specialized destruction technology with applied momentum
+
+Sonolysis has a smaller scientific base but shows an unusually coherent applied-development signal through the University of Surrey–Arcadis collaboration.
+
+The programme progresses from process characterization toward:
+
+- defluorination studies;
+- optimization of treatment conditions;
+- increased treatment volumes;
+- application to AFFF matrices.
+
+This continuity suggests genuine technology development rather than isolated academic studies.
+
+Scientific publication volume remains relatively modest, and activity declined after its 2023 peak.
+
+**Assessment:** specialized but credible destruction pathway with evidence of sustained industry–academia development; likely more relevant to selected concentrated streams than universal water treatment.
+
+### 7.8 Emerging biological approaches
+
+Biological treatment shows one of the highest relative publication-growth rates in the corpus.
+
+However, this growth begins from a very small early-period base.
+
+The increase from two publications in 2018–2020 to 19 during 2023–2025 indicates rising scientific interest, but the current evidence does not demonstrate comparable maturity, patent activity or deployment.
+
+Biological degradation of highly persistent PFAS remains scientifically challenging.
+
+**Assessment:** emerging research area with strong relative momentum but currently limited evidence of technological maturity.
+
+### 7.9 Comparative assessment
+
+Taken together, the landscape suggests three broad technology groups.
+
+**Established capture technologies**
+
+- activated carbon;
+- ion exchange.
+
+These have the strongest evidence of practical deployment and remain central to current PFAS treatment.
+
+**Advancing destructive technologies**
+
+- electrochemical oxidation;
+- supercritical water oxidation;
+- plasma.
+
+These technologies show increasing evidence beyond laboratory research and are particularly relevant for concentrated PFAS streams.
+
+**Research-intensive emerging destruction approaches**
+
+- photocatalysis;
+- sonolysis;
+- hydrothermal variants;
+- biological treatment.
+
+These show varying combinations of publication momentum and technical promise but generally less deployment evidence.
+
+The most important strategic finding is that these groups should not be viewed as mutually exclusive competitors.
+
+The emerging treatment architecture is increasingly:
+
+**capture → concentrate → destroy**
+
+In this model:
+
+1. activated carbon, ion exchange, membranes or other separation processes remove PFAS from large water volumes;
+2. PFAS is concentrated into a smaller residual stream;
+3. destructive technologies treat that concentrated stream;
+4. regeneration and residual management reduce waste and improve process economics.
+
+This architecture reconciles the strengths and limitations of both mature capture technologies and emerging destructive technologies.
+
+It also provides a useful framework for interpreting the strongest signals identified across the scientific and patent landscapes.
 ## 8. Strategic Findings
 
 _To be completed after synthesis of the scientific and patent evidence._
