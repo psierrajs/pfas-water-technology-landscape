@@ -284,11 +284,82 @@ The patent results should therefore be interpreted as technology-intelligence si
 
 ## 5. Cross-Technology Patent Comparison
 
-See:
+The current cross-technology patent comparison integrates 42 included patent families:
 
-- `patent-technology-comparison.md`
+- 25 activated-carbon families;
+- 17 ion-exchange families.
 
-Key comparison currently includes activated carbon and ion exchange.
+These two technology groups show both common patterns and important differences.
+
+### 5.1 Dominance of adsorption
+
+Adsorption remains the dominant treatment mode in both patent portfolios.
+
+Activated carbon contains 15 adsorption-focused families, while ion exchange contains 11.
+
+This confirms that contaminant capture remains the principal innovation pathway for both technologies. However, the patent portfolios also show increasing attention to what happens after capture.
+
+### 5.2 Combined-process architectures
+
+Activated carbon shows a stronger presence of combined-process architectures.
+
+Six activated-carbon families are classified as combined processes, compared with one ion-exchange family.
+
+This suggests that activated carbon is frequently being incorporated into broader treatment trains rather than developed only as a stand-alone sorbent.
+
+Examples within the activated-carbon portfolio include systems combining adsorption with destruction, regeneration, mobile treatment or other downstream processes.
+
+### 5.3 Regeneration
+
+Regeneration is present in both technology groups.
+
+Each portfolio contains three regeneration-focused patent families.
+
+Because the ion-exchange dataset is smaller overall, regeneration represents a larger relative share of ion-exchange activity.
+
+This is strategically important because both activated carbon and ion-exchange resins transfer PFAS from water into a concentrated treatment medium. Regeneration technologies can therefore influence:
+
+- operating cost;
+- media lifetime;
+- secondary-waste generation;
+- handling of concentrated PFAS streams;
+- suitability for integration with destructive treatment.
+
+### 5.4 Capture and destruction
+
+Explicit capture-and-destroy activity remains a minority of the patent families, but it is visible in both portfolios.
+
+Activated carbon contains one family classified primarily as capture and destroy, while ion exchange contains two.
+
+The activated-carbon intelligence analysis additionally identified several families where destruction, defluorination or treatment-train integration occurs alongside adsorption.
+
+The importance of these families is greater than their absolute number suggests because they address one of the principal limitations of capture-only technologies: PFAS is removed from water but not eliminated.
+
+### 5.5 Strategic interpretation
+
+The comparison suggests that activated carbon and ion exchange occupy similar roles as mature PFAS capture platforms but show somewhat different innovation profiles.
+
+**Activated carbon** has the broader and more diverse patent landscape. Innovation extends across improved sorbent materials, filters, treatment trains, regeneration, mobile systems and in-situ applications.
+
+**Ion exchange** has a smaller portfolio but shows relatively strong activity around regeneration, selective resins and chemically modified materials.
+
+Neither portfolio is moving away from adsorption. Instead, the emerging pattern is the addition of functionality around adsorption:
+
+- greater selectivity;
+- regeneration;
+- concentration of PFAS;
+- treatment-train integration;
+- eventual destruction of the captured contaminants.
+
+This suggests that the main innovation frontier may not be the replacement of adsorption technologies, but the development of systems that make capture more selective, reusable and compatible with downstream destruction.
+
+### 5.6 Comparison limitations
+
+The family counts should not be interpreted as a direct measure of global patent activity.
+
+The activated-carbon and ion-exchange datasets were generated using different search sources and screening workflows, and their search spaces are not guaranteed to have identical recall.
+
+The comparison is therefore most useful for identifying differences in innovation themes and treatment architectures rather than for ranking technologies by absolute patent volume.
 
 ## 6. Science–Patent Integration
 
