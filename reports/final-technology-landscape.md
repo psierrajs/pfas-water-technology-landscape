@@ -1039,13 +1039,131 @@ The project provides a reproducible framework for continuing that monitoring as 
 
 ## 11. Reproducibility
 
-The repository contains:
+The project was designed as a reproducible technology-intelligence workflow rather than as a one-off narrative report.
 
-- documented search strategies;
-- reusable processing scripts;
-- screening and classification workflows;
-- derived datasets;
-- figures;
-- intermediate analytical reports.
+The repository contains the main analytical components required to understand how the results were generated.
 
-ex
+### 11.1 Search strategies
+
+Search strategies are documented separately for scientific literature and patent analysis.
+
+These include:
+
+- OpenAlex scientific-literature search logic;
+- activated-carbon patent search strategy;
+- ion-exchange patent search strategy;
+- electrochemical-oxidation patent search strategy.
+
+Where different patent platforms were used, the source and query logic are recorded explicitly.
+
+### 11.2 Raw and processed data
+
+The project separates raw source data from derived analytical outputs.
+
+Raw exports are preserved unchanged where possible.
+
+Processed datasets contain:
+
+- deduplicated scientific records;
+- relevance classifications;
+- technology classifications;
+- authorship and institution enrichment;
+- evidence-type classifications;
+- technology-maturity outputs;
+- patent-screening decisions;
+- patent-family summaries;
+- family-level intelligence classifications;
+- science–patent comparison datasets.
+
+Generated or restricted datasets that should not be committed are excluded using repository ignore rules.
+
+### 11.3 Reusable analysis scripts
+
+The `src/` directory contains reusable Python scripts for the main analytical stages.
+
+These include workflows for:
+
+- scientific-record processing;
+- relevance classification;
+- technology classification;
+- institutional analysis;
+- collaboration analysis;
+- technology-growth analysis;
+- maturity classification and validation;
+- patent-export processing;
+- patent screening;
+- patent-family consolidation;
+- patent intelligence classification;
+- cross-technology comparison;
+- science–patent integration;
+- figure generation.
+
+Where possible, analytical transformations are implemented in code rather than by manually editing output files.
+
+### 11.4 Validation and quality control
+
+The workflow includes explicit quality-control steps.
+
+Examples include:
+
+- deduplication of scientific records;
+- manual validation samples for classification;
+- institutional alias correction;
+- review of affiliation-resolution errors;
+- manual validation of high-maturity scientific records;
+- review of uncertain patent-screening decisions;
+- audit and correction of provisional patent-family groups.
+
+These steps are retained in the project history so that corrections remain traceable.
+
+### 11.5 Intermediate reports
+
+Intermediate Markdown reports document the outputs of individual analytical stages before they are synthesized into this final landscape.
+
+These include reports covering:
+
+- publication trends;
+- technology growth;
+- evidence-type analysis;
+- institution–technology relationships;
+- institutional collaboration;
+- maturity validation;
+- activated-carbon patent intelligence;
+- ion-exchange patent intelligence;
+- electrochemical-oxidation patents;
+- cross-technology patent comparison;
+- science–patent integration.
+
+This layered reporting structure allows individual findings to be inspected independently of the final synthesis.
+
+### 11.6 Figures
+
+Figures used in the landscape are generated from processed datasets using reproducible scripts.
+
+The repository therefore preserves both:
+
+- the generated visual output;
+- the code used to create it.
+
+This reduces dependence on manually constructed charts and makes later updates easier.
+
+### 11.7 Version control
+
+Git is used throughout the project to record the evolution of:
+
+- search strategies;
+- processing scripts;
+- methodological changes;
+- quality-control corrections;
+- reports;
+- figures.
+
+Analytical stages are committed incrementally so that the development of the landscape can be reconstructed from repository history.
+
+### 11.8 Updating the landscape
+
+The project structure is intended to support future updates.
+
+New scientific publications or patent exports can be introduced into the same processing workflow, allowing the landscape to be refreshed without rebuilding the analysis from scratch.
+
+The same framework can also be extended to additional PFAS-treatment technologies or reused for other technology-intelligence topics with similar evidence structures.
