@@ -22,3 +22,9 @@ This comparison examines the relative scientific and patent activity observed fo
 - Activated carbon shows a larger number of included patent families in the current patent datasets.
 - This may indicate stronger translation from research into patented technology for activated-carbon approaches, although differences in search strategy and patent coverage mean that the comparison should be interpreted as directional rather than absolute.
 - Both technologies display substantial activity across scientific and patent evidence, supporting their importance within the PFAS water-treatment landscape.
+
+## Figure
+
+![Science versus patent activity](../figures/science_patent_technology_comparison.png)
+
+**Figure:** Comparison of scientific publications and included patent families for activated-carbon and ion-exchange PFAS water-treatment technologies. Counts should be interpreted as directional because the scientific and patent datasets were generated using different search and screening workflows.
