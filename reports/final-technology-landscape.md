@@ -363,15 +363,126 @@ The comparison is therefore most useful for identifying differences in innovatio
 
 ## 6. Science–Patent Integration
 
-See:
+The science–patent comparison currently focuses on activated carbon and ion exchange because these technologies have sufficiently developed datasets on both sides of the analysis.
 
-- `science-patent-technology-comparison.md`
+### 6.1 Evidence coverage
 
-Current integrated comparison includes:
+Within the classified scientific corpus:
 
-- activated carbon;
-- ion exchange.
+- activated-carbon-related adsorption accounts for 53 publications;
+- ion exchange accounts for 53 publications.
 
+Within the current patent datasets:
+
+- activated carbon accounts for 25 included patent families;
+- ion exchange accounts for 17 included patent families.
+
+![Science versus patent activity](../figures/science_patent_technology_comparison.png)
+
+**Figure:** Comparison of scientific publications and included patent families for activated-carbon and ion-exchange PFAS water-treatment technologies.
+
+The scientific counts are identical for the two technologies in the current corpus, but activated carbon has a larger number of included patent families.
+
+This difference should not be interpreted as a direct commercialization ratio because the scientific and patent datasets were generated using different search strategies, classification rules and source systems.
+
+It is nevertheless useful as a directional signal.
+
+### 6.2 Activated carbon
+
+Activated carbon shows strong evidence on both the scientific and patent sides of the landscape.
+
+Scientific activity is substantial, and the technology has confirmed full-scale evidence in drinking-water treatment.
+
+The patent portfolio is also broad, covering:
+
+- conventional adsorption;
+- modified and enhanced carbon materials;
+- treatment trains;
+- regeneration;
+- mobile systems;
+- in-situ applications;
+- capture-and-destroy concepts.
+
+The combination of scientific volume, validated full-scale evidence and a diverse patent portfolio suggests that activated carbon occupies a relatively mature position within PFAS treatment.
+
+Innovation appears to be concentrated less on proving that activated carbon can remove PFAS and more on improving:
+
+- adsorption performance;
+- selectivity;
+- media design;
+- regeneration;
+- system integration;
+- treatment of concentrated PFAS residuals.
+
+### 6.3 Ion exchange
+
+Ion exchange has the same scientific-publication count as activated carbon in the current comparison but a smaller included patent-family set.
+
+Scientific evidence includes pilot-scale studies and a confirmed field demonstration when ion-exchange resin is coupled with electrochemical oxidation.
+
+The patent landscape shows continued activity around:
+
+- conventional ion-exchange adsorption;
+- selective resins;
+- functionalized resins;
+- regeneration;
+- capture-and-destroy systems.
+
+This suggests that ion exchange is also a relatively established capture technology, but with a more focused innovation profile than activated carbon.
+
+A particularly important science–technology signal is the increasing interest in regeneration and combined treatment.
+
+Ion exchange is therefore relevant not only as a stand-alone PFAS removal technology, but also as a concentration step that can feed downstream destructive processes.
+
+### 6.4 Science-to-application signals
+
+Several examples show alignment between scientific activity and technological development.
+
+The clearest example is electrochemical oxidation combined with ion exchange.
+
+Scientific publications include a field demonstration of ion-exchange resin coupled with electrochemical oxidation for PFAS treatment in groundwater.
+
+The patent landscape separately identifies electrochemical-oxidation families associated with the University of Georgia and other commercial and academic organizations.
+
+This provides evidence that the capture-and-destroy concept is present across both scientific and patent activity.
+
+Activated carbon shows a different form of alignment.
+
+The scientific literature contains validated full-scale and pilot-scale adsorption evidence, while the patent portfolio contains deployable filters, treatment trains, regeneration systems and mobile-treatment architectures.
+
+This suggests that patent activity is building around an already established treatment platform.
+
+### 6.5 Interpretation
+
+The integrated evidence suggests that PFAS treatment technologies cannot be evaluated solely by scientific publication volume.
+
+A more useful assessment considers several dimensions together:
+
+- scientific activity;
+- direction of publication growth;
+- patent activity;
+- type of patent innovation;
+- pilot and field evidence;
+- system integration;
+- organizational participation.
+
+Activated carbon currently shows the strongest combination of scientific maturity, deployment evidence and patent breadth among the two directly compared capture technologies.
+
+Ion exchange shows similarly strong scientific activity but a more concentrated patent profile, with particular emphasis on selective media, regeneration and integration with destructive treatment.
+
+More broadly, the science–patent comparison reinforces one of the central findings of the landscape: the innovation frontier is increasingly shifting from simple PFAS capture toward treatment systems that combine capture, concentration, regeneration and destruction.
+
+### 6.6 Limitations
+
+The science and patent counts are not directly equivalent metrics.
+
+Scientific publications and patent families differ in purpose, time lag, classification structure and search coverage.
+
+The activated-carbon scientific subset was derived from adsorption-classified publications containing activated-carbon terminology, whereas ion exchange has a direct technology label.
+
+Patent coverage also differs by search source and workflow.
+
+The comparison should therefore be interpreted as directional technology-intelligence evidence rather than as a quantitative measure of commercialization probability or market maturity.
 ## 7. Technology Assessment
 
 _To be completed._
