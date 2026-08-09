@@ -2,7 +2,56 @@
 
 ## Executive Summary
 
-_To be completed after the main analysis sections are consolidated._
+This technology landscape evaluates emerging and established approaches for the removal and destruction of per- and polyfluoroalkyl substances (PFAS) in water.
+
+The analysis integrates scientific literature, patent activity, institutional collaboration, technology-maturity signals and selected deployment evidence. The objective is not to identify a single universally superior treatment technology, but to determine which approaches show the strongest combination of scientific activity, technological development and movement toward practical application.
+
+The scientific corpus contains 658 publications published between 2018 and 2026. Activity increased strongly during the study period, with total annual records rising from 14 in 2018 to 140 in 2023.
+
+Adsorption is the dominant scientific technology category, with 167 classified publications. Other major areas include photocatalysis, electrochemical oxidation, ion exchange, membranes, plasma, hydrothermal treatment and supercritical water oxidation.
+
+Several destructive technologies show particularly strong recent momentum. Electrochemical oxidation increased from 7 publications in 2018–2020 to 37 in 2023–2025. Hydrothermal treatment increased from 3 to 23 over the same periods, while supercritical water oxidation emerged as a distinct research area after 2020.
+
+Scientific maturity evidence shows that PFAS treatment is progressing beyond laboratory proof of concept. Manually validated records include:
+
+- full-scale granular activated-carbon treatment in drinking water;
+- pilot-scale activated-carbon and ion-exchange treatment;
+- pilot and field demonstrations of electrochemical oxidation;
+- field demonstration of supercritical water oxidation;
+- pilot-scale plasma treatment.
+
+The patent landscape reveals different innovation profiles across technologies.
+
+Activated carbon has the broadest patent portfolio in the current analysis, with 25 included patent families. Although capture-only approaches remain dominant, the portfolio also includes combined processes, regeneration, mobile systems, in-situ treatment and capture-and-destroy concepts.
+
+Ion exchange contains 17 included patent families. Its portfolio is more concentrated but shows clear innovation around selective and functionalized resins, regeneration and capture-and-destroy architectures.
+
+Electrochemical oxidation retains 15 patent families in the pilot analysis and shows particularly strong recent activity, with many families having priority dates from 2024 onward.
+
+Institutional analysis highlights several coherent technology-development programmes. Battelle shows one of the clearest applied trajectories in supercritical water oxidation, progressing from aqueous treatment studies to field demonstrations and site-specific deployment. The University of Georgia shows strong activity in electrochemical oxidation and integrated capture-and-destroy systems. The University of Surrey and Arcadis demonstrate sustained collaboration in sonolysis, while Rice University shows a coherent development path in photocatalytic and integrated capture–destruction materials.
+
+The strongest cross-cutting finding is that PFAS treatment is increasingly moving away from isolated single-step technologies toward integrated treatment architectures.
+
+The emerging model is:
+
+**capture → concentrate → regenerate where possible → destroy**
+
+Activated carbon and ion exchange remain highly important because of their maturity and ability to remove PFAS from large water volumes. Their main limitation is that they transfer PFAS into another medium rather than eliminate it.
+
+Destructive technologies such as electrochemical oxidation, supercritical water oxidation and plasma therefore become strategically important when they are applied to smaller, concentrated PFAS streams produced by upstream capture processes.
+
+The landscape suggests that future competitive advantage is likely to depend less on identifying one universal treatment technology and more on integrating complementary technologies into scalable treatment systems.
+
+The highest-priority areas for continued monitoring are:
+
+- electrochemical oxidation;
+- supercritical water oxidation;
+- advanced and regenerable activated-carbon systems;
+- selective and regenerable ion-exchange resins;
+- integrated capture-and-destroy treatment trains;
+- organizations moving from laboratory research toward field deployment.
+
+Overall, the evidence indicates that mature capture technologies will remain central to PFAS treatment, but the main innovation frontier is shifting toward regeneration, treatment integration and destruction of concentrated PFAS residual streams.
 
 ## 1. Research Question and Scope
 
