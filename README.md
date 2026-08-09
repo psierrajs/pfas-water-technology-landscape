@@ -2,6 +2,11 @@
 
 An exploratory and reproducible scientific, technology and competitive intelligence project focused on emerging technologies for the removal and destruction of PFAS in water.
 
+## Start here
+
+- **[Executive brief](reports/executive-brief.md)** — key findings and strategic implications in a short format.
+- **[Full technology landscape](reports/final-technology-landscape.md)** — complete methodology, scientific landscape, patent analysis and technology assessment.
+
 ## Research question
 
 Which emerging technologies for PFAS removal or destruction in water show the strongest scientific, technological and business activity, and which organisations appear best positioned?
