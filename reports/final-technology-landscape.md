@@ -225,7 +225,7 @@ The strongest maturity signals currently occur in:
 
 This progression from laboratory research toward pilot and field application is especially important when interpreting publication momentum: increasing publication activity is more strategically significant when accompanied by evidence of deployment.
 
-### Interpretation
+### 3.7 Interpretation
 
 These results describe the retrieved and classified OpenAlex corpus rather than the complete global PFAS literature.
 
@@ -321,7 +321,7 @@ Across all three areas, a common pattern is visible: innovation is increasingly 
 
 This trend supports the broader landscape hypothesis that future PFAS treatment is likely to rely increasingly on integrated treatment architectures rather than on a single universal technology.
 
-### Patent-analysis limitations
+### 4.5 Patent-analysis limitations
 
 The patent datasets were generated using technology-specific pilot searches rather than a single exhaustive global patent search.
 
@@ -548,7 +548,7 @@ The objective is not to identify a single universally superior technology. PFAS-
 
 ### 7.1 Activated carbon — established capture platform
 
-Activated carbon is the strongest mature capture technology identified in the current landscape.
+Activated carbon shows the strongest combination of maturity, deployment evidence and patent breadth among the capture technologies examined in detail in the current landscape.
 
 Scientific evidence is extensive. Adsorption is the largest category in the OpenAlex corpus, and activated-carbon-specific publications form a substantial subset of this activity.
 
@@ -741,7 +741,7 @@ It also provides a useful framework for interpreting the strongest signals ident
 
 The combined scientific, patent, maturity and institutional evidence supports several strategic conclusions about the PFAS water-treatment landscape.
 
-### 8.1 The market is unlikely to converge on a single treatment technology
+### 8.1 The treatment landscape is unlikely to converge on a single technology
 
 No technology identified in the landscape provides an obvious universal solution across all PFAS-contaminated water streams.
 
@@ -773,7 +773,7 @@ Scientific and patent activity increasingly addresses this limitation through:
 
 The strategic innovation opportunity is therefore shifting from removal alone toward management of the complete PFAS treatment cycle.
 
-### 8.3 Capture → concentrate → destroy is the strongest emerging system architecture
+### 8.3 Capture → concentrate → destroy emerges as a recurring system architecture
 
 The most consistent cross-cutting signal in the landscape is the emergence of integrated treatment architectures.
 
@@ -790,7 +790,7 @@ Ion exchange coupled with electrochemical oxidation provides one of the clearest
 
 Activated-carbon regeneration followed by treatment of concentrated residuals represents another potential pathway.
 
-### 8.4 Electrochemical oxidation is one of the strongest near-term destruction candidates
+### 8.4 Electrochemical oxidation shows a strong near-term destruction signal
 
 Electrochemical oxidation combines several positive signals:
 
@@ -802,7 +802,7 @@ Electrochemical oxidation combines several positive signals:
 
 Its strategic advantage is that it can potentially operate on concentrated PFAS streams produced by upstream separation technologies.
 
-The technology still faces engineering and cost constraints, but it currently shows one of the strongest science-to-application trajectories among destructive approaches.
+The technology still faces engineering and cost constraints, but it shows a particularly strong science-to-application trajectory within the current evidence base.
 
 ### 8.5 Supercritical water oxidation shows unusually strong application signals
 
@@ -860,7 +860,7 @@ Examples include:
 
 These examples show why technology intelligence benefits from tracking research programmes rather than simply counting papers.
 
-### 8.9 Public–private and regulatory networks are important to commercialization
+### 8.9 Public–private and regulatory networks are important to technology translation and deployment
 
 The scientific collaboration network includes engineering companies, universities and environmental agencies.
 
@@ -1012,7 +1012,7 @@ The emerging model is:
 
 This architecture addresses a central limitation of conventional PFAS treatment: removal from water does not eliminate the contaminant.
 
-The most promising innovation pathways therefore combine mature separation technologies with increasingly credible destructive processes.
+A particularly promising innovation pathway is therefore the integration of mature separation technologies with increasingly credible destructive processes.
 
 Institutional evidence reinforces this conclusion. Several of the strongest signals occur where sustained scientific programmes, collaboration networks and applied-development evidence align.
 
