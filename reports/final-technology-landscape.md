@@ -184,24 +184,103 @@ Growth ratios based on small starting counts can exaggerate apparent momentum, a
 
 ## 4. Patent Landscape
 
-### Activated Carbon
+### 4.1 Activated Carbon
 
-See:
+The activated-carbon patent pilot produced the broadest family-level dataset in the current patent landscape.
 
-- `patent-adsorption-pilot-summary.md`
-- `patent-adsorption-intelligence-summary.md`
+A total of 67 patent publications were reviewed and consolidated into 45 patent families. Of these, 25 families were retained as directly relevant to PFAS water treatment, 19 were retained as contextual, and one was excluded at family level.
 
-### Ion Exchange
+The included families span priority dates from 2005 to 2026 and cover a wide range of jurisdictions, including China, the United States, WIPO, Japan, Australia and Europe.
 
-See:
+At family level, adsorption remains the dominant treatment mode, accounting for 15 of the 25 included families. However, the portfolio also contains:
 
-- `patent-ion-exchange-intelligence-summary.md`
+- 6 combined-process families;
+- 3 regeneration-focused families;
+- 1 explicitly classified capture-and-destroy family.
 
-### Electrochemical Oxidation
+The technology portfolio is more diverse than conventional granular activated carbon alone. It includes modified activated carbon, powdered activated carbon, biomass-derived carbon, carbon composites, sub-micron PAC and GAC.
 
-See:
+The principal strategic themes are:
 
-- `patent-eox-pilot-summary.md`
+- enhanced adsorption materials;
+- conventional adsorption;
+- combined treatment trains;
+- capture and destroy;
+- regeneration;
+- mobile or modular treatment;
+- in-situ remediation;
+- industrial point-source treatment.
+
+Capture-only approaches remain dominant, but seven families incorporate destruction, capture-and-destroy or explicit defluorination concepts. Six families also show field-deployable system characteristics.
+
+This indicates that activated-carbon innovation is evolving beyond incremental sorbent improvement toward system integration, regeneration and more deployable treatment architectures.
+
+### 4.2 Ion Exchange
+
+The ion-exchange patent analysis contains 17 included patent families.
+
+Conventional ion-exchange adsorption remains the dominant pattern, with 11 families classified primarily as adsorption technologies.
+
+The remaining families include:
+
+- 3 regeneration-focused families;
+- 2 capture-and-destroy families;
+- 1 combined-process family.
+
+Material-development activity is also visible. The portfolio includes conventional ion-exchange resins alongside selective resins, functionalized resins and amine-based resin systems.
+
+Regeneration is one of the clearest innovation themes in the ion-exchange portfolio. This is strategically important because resin replacement, regeneration efficiency and management of concentrated PFAS waste streams are important constraints on long-term treatment economics.
+
+The presence of selective and chemically modified resins also suggests continued efforts to improve PFAS affinity, selectivity and performance relative to competing ions.
+
+Overall, the ion-exchange portfolio appears more concentrated than activated carbon but shows a relatively strong emphasis on regeneration, selective materials and transition beyond simple capture.
+
+### 4.3 Electrochemical Oxidation
+
+The electrochemical-oxidation patent pilot screened 22 patent publications and retained 15 patent families.
+
+The family set spans priority dates from 2009 to 2025, but activity is strongly concentrated in recent years. Six retained families have earliest priority dates in 2024 and two more in 2025.
+
+This recent concentration is consistent with electrochemical oxidation emerging as an increasingly active area of PFAS destruction technology.
+
+The retained families include patents covering:
+
+- direct electrochemical oxidation of PFAS in water;
+- treatment of PFAS-containing regeneration wastes;
+- electrochemical destruction of PFAS and organic-carbon mixtures;
+- integration of electro-oxidation with wet-air oxidation;
+- treatment of soil-washing wastewater;
+- specialized electrodes for PFAS destruction.
+
+The assignee landscape includes commercial water-treatment and engineering organizations such as Evoqua Water Technologies, AECOM, Gradiant, Lummus Technology and StreamGo Water USA, together with several universities and research organizations.
+
+The University of Georgia appears in both the scientific and patent evidence, providing an early example of science–patent alignment around electrochemical PFAS treatment.
+
+The recent patent concentration and frequent emphasis on destruction suggest that electrochemical oxidation is moving beyond academic investigation toward engineered treatment systems and commercial technology development.
+
+### 4.4 Patent Landscape Interpretation
+
+The three patent datasets reveal distinct innovation profiles.
+
+Activated carbon has the broadest and most diversified patent portfolio, spanning materials, filters, treatment trains, regeneration and deployable systems.
+
+Ion exchange shows a narrower but strategically focused portfolio, with visible activity around regeneration, selective resins and modified materials.
+
+Electrochemical oxidation differs from both capture technologies because its patents are more explicitly oriented toward PFAS destruction and integrated treatment architectures.
+
+Across all three areas, a common pattern is visible: innovation is increasingly moving beyond single-step contaminant capture toward systems that incorporate regeneration, concentration, treatment trains or destruction.
+
+This trend supports the broader landscape hypothesis that future PFAS treatment is likely to rely increasingly on integrated treatment architectures rather than on a single universal technology.
+
+### Patent-analysis limitations
+
+The patent datasets were generated using technology-specific pilot searches rather than a single exhaustive global patent search.
+
+Coverage therefore differs between technologies and absolute family counts should not be interpreted as directly comparable market-size indicators.
+
+Family grouping was performed using reproducible but partly provisional rules, and selected family relationships required manual quality control.
+
+The patent results should therefore be interpreted as technology-intelligence signals rather than as a freedom-to-operate, legal-status or exhaustive patent-landscape analysis.
 
 ## 5. Cross-Technology Patent Comparison
 
