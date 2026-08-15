@@ -82,7 +82,40 @@ organizations = [
             "Developer of PFAS ANNIHILATOR and GAC Renew. "
             "Commercial deployment transferred/scaled through Revive Environmental."
         ),
-    }
+    },
+        {
+        "organization_id": "ORG-002",
+        "organization_name": "Gradiant",
+        "normalized_name": "Gradiant",
+        "organization_type": "water_technology_company",
+        "headquarters_country": "United States",
+        "geographic_scope": "global",
+        "technology_labels": (
+            "foam_fractionation;"
+            "electrochemical_oxidation;"
+            "integrated_capture_and_destroy"
+        ),
+        "value_chain_roles": (
+            "technology_development;"
+            "system_integration;"
+            "commercial_deployment"
+        ),
+        "technology_origin_role": "developer_and_integrator",
+        "commercialization_entity": "Gradiant",
+        "target_matrices": (
+            "industrial_wastewater;"
+            "municipal_water;"
+            "landfill_leachate;"
+            "RO_concentrate;"
+            "AFFF_contaminated_groundwater"
+        ),
+        "website": "https://www.gradiant.com/",
+        "notes": (
+            "Developer and commercial supplier of ForeverGone, integrating "
+            "micro-foam fractionation with electro-oxidation for PFAS "
+            "concentration and destruction."
+        ),
+    },
 ]
 
 
@@ -317,6 +350,122 @@ signals = [
         "evidence_summary": (
             "Battelle and Revive Environmental announced a U.S. Department of "
             "Defense demonstration project involving PFAS destruction technology."
+        ),
+        "confidence_level": "high",
+        "verification_status": "verified_primary_source",
+        "date_accessed": "2026-08-15",
+        "notes": "",
+    },
+        {
+        "signal_id": "SIG-0008",
+        "organization_id": "ORG-002",
+        "organization_name": "Gradiant",
+        "evidence_date": "2024-05-15",
+        "evidence_type": "commercial_product",
+        "technology_labels": (
+            "foam_fractionation;"
+            "electrochemical_oxidation;"
+            "integrated_capture_and_destroy"
+        ),
+        "treatment_role": "integrated_treatment",
+        "target_matrix": "municipal_water;industrial_wastewater",
+        "maturity_or_deployment_stage": "commercial_launch",
+        "partner_organizations": "",
+        "location": "United States; global",
+        "source_title": (
+            "Gradiant Launches ForeverGone, the Industry's Only Complete "
+            "PFAS Removal and Destruction Solution"
+        ),
+        "source_url": (
+            "https://www.gradiant.com/press-release/"
+            "gradiant-launches-forevergone-the-industrys-only-complete-"
+            "pfas-removal-and-destruction-solution/"
+        ),
+        "source_type": "company_press_release",
+        "evidence_summary": (
+            "Gradiant commercially launched ForeverGone, integrating "
+            "micro-foam fractionation for PFAS concentration with an "
+            "electro-oxidation destruction engine."
+        ),
+        "confidence_level": "high",
+        "verification_status": "verified_primary_source",
+        "date_accessed": "2026-08-15",
+        "notes": "",
+    },
+    {
+        "signal_id": "SIG-0009",
+        "organization_id": "ORG-002",
+        "organization_name": "Gradiant",
+        "evidence_date": "2024-10-08",
+        "evidence_type": "other_strategic_signal",
+        "technology_labels": (
+            "foam_fractionation;"
+            "electrochemical_oxidation;"
+            "integrated_capture_and_destroy"
+        ),
+        "treatment_role": "integrated_treatment",
+        "target_matrix": (
+            "industrial_wastewater;"
+            "municipal_water;"
+            "landfill_water"
+        ),
+        "maturity_or_deployment_stage": "third_party_validation",
+        "partner_organizations": "multiple accredited laboratories",
+        "location": "United States",
+        "source_title": (
+            "ForeverGone is Proven to Remove and Completely Destroy PFAS "
+            "in Industrial and Municipal Applications"
+        ),
+        "source_url": (
+            "https://www.gradiant.com/press-release/"
+            "forevergone-is-proven-to-remove-and-completely-destroy-pfas-"
+            "in-industrial-and-municipal-applications/"
+        ),
+        "source_type": "company_press_release",
+        "evidence_summary": (
+            "Gradiant reported third-party accredited laboratory validation "
+            "of ForeverGone using contaminated industrial, municipal and "
+            "landfill waters, with removal below regulatory limits and "
+            "destruction of the concentrated PFAS stream."
+        ),
+        "confidence_level": "high",
+        "verification_status": "verified_primary_source",
+        "date_accessed": "2026-08-15",
+        "notes": (
+            "Performance claims originate from Gradiant but explicitly reference "
+            "multiple third-party accredited laboratories."
+        ),
+    },
+    {
+        "signal_id": "SIG-0010",
+        "organization_id": "ORG-002",
+        "organization_name": "Gradiant",
+        "evidence_date": "2025-09-29",
+        "evidence_type": "field_deployment",
+        "technology_labels": (
+            "foam_fractionation;"
+            "electrochemical_oxidation;"
+            "integrated_capture_and_destroy"
+        ),
+        "treatment_role": "integrated_treatment",
+        "target_matrix": "PFAS_contaminated_water",
+        "maturity_or_deployment_stage": "commercial_field_deployment",
+        "partner_organizations": "Munich International Airport",
+        "location": "Munich, Germany",
+        "source_title": (
+            "Gradiant's ForeverGone Sets New Standard for PFAS Destruction "
+            "with Breakthrough Cost and Performance"
+        ),
+        "source_url": (
+            "https://www.gradiant.com/press-release/"
+            "forevergone-pfas-destruction-munich-airport/"
+        ),
+        "source_type": "company_press_release",
+        "evidence_summary": (
+            "Gradiant reported deployment of the ForeverGone PFAS treatment "
+            "platform at Munich International Airport, providing a commercial "
+            "field-deployment signal for the integrated concentration-and-"
+            "destruction system."
         ),
         "confidence_level": "high",
         "verification_status": "verified_primary_source",
