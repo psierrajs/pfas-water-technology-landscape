@@ -83,3 +83,7 @@ data/processed/high_maturity_validation/
 
 # Processed patent datasets
 data/processed/patents/
+
+# Generated commercial-intelligence outputs
+
+data/processed/commercial_intelligence/
