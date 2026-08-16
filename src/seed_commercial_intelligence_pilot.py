@@ -152,6 +152,40 @@ organizations = [
             "and destructive treatment technologies."
         ),
     },
+        {
+        "organization_id": "ORG-004",
+        "organization_name": "Evoqua Water Technologies / Xylem",
+        "normalized_name": "Evoqua / Xylem",
+        "organization_type": "water_technology_company",
+        "headquarters_country": "United States",
+        "geographic_scope": "global",
+        "technology_labels": (
+            "ion_exchange;"
+            "activated_carbon;"
+            "adsorption;"
+            "integrated_treatment"
+        ),
+        "value_chain_roles": (
+            "technology_supply;"
+            "system_integration;"
+            "commercial_deployment;"
+            "service"
+        ),
+        "technology_origin_role": "technology_supplier_and_integrator",
+        "commercialization_entity": "Xylem",
+        "target_matrices": (
+            "drinking_water;"
+            "groundwater;"
+            "municipal_water;"
+            "industrial_water"
+        ),
+        "website": "https://www.xylem.com/",
+        "notes": (
+            "Evoqua developed and deployed PFAS treatment systems using ion "
+            "exchange and other adsorption media. Xylem completed its acquisition "
+            "of Evoqua in 2023 and continues to surface Evoqua PFAS capabilities."
+        ),
+    },
 ]
 
 
@@ -602,7 +636,107 @@ signals = [
             "University of Surrey research records independently show Arcadis "
             "participation in PFAS sonolysis scale-up research."
         ),
+    }, 
+        {
+        "signal_id": "SIG-0014",
+        "organization_id": "ORG-004",
+        "organization_name": "Evoqua / Xylem",
+        "evidence_date": "2023-01-23",
+        "evidence_type": "acquisition",
+        "technology_labels": "ion_exchange;activated_carbon;PFAS_remediation",
+        "treatment_role": "integrated_treatment",
+        "target_matrix": "municipal_water;industrial_water",
+        "maturity_or_deployment_stage": "corporate_acquisition",
+        "partner_organizations": "Xylem;Evoqua Water Technologies",
+        "location": "United States",
+        "source_title": (
+            "Xylem To Acquire Evoqua in $7.5 Billion All-Stock Transaction"
+        ),
+        "source_url": (
+            "https://www.xylem.com/en-us/about-xylem/newsroom/press-releases/"
+            "xylem-to-acquire-evoqua-in-%247.5-billion-all-stock-transaction/"
+        ),
+        "source_type": "company_press_release",
+        "evidence_summary": (
+            "Xylem announced an agreement to acquire Evoqua for approximately "
+            "$7.5 billion. Xylem specifically identified Evoqua as a leader in "
+            "remediation of emerging contaminants including PFAS."
+        ),
+        "confidence_level": "high",
+        "verification_status": "verified_primary_source",
+        "date_accessed": "2026-08-16",
+        "notes": (
+            "Useful ownership-continuity signal for tracking PFAS capability "
+            "after the Evoqua brand became part of Xylem."
+        ),
     },
+    {
+        "signal_id": "SIG-0015",
+        "organization_id": "ORG-004",
+        "organization_name": "Evoqua / Xylem",
+        "evidence_date": "",
+        "evidence_type": "full_scale_deployment",
+        "technology_labels": "ion_exchange",
+        "treatment_role": "capture",
+        "target_matrix": "drinking_water;groundwater",
+        "maturity_or_deployment_stage": "operational_full_scale",
+        "partner_organizations": "Santa Clarita Valley Water Agency",
+        "location": "California, United States",
+        "source_title": (
+            "SCV Water Agency Selects Evoqua Vessels & Media For PFAS Removal"
+        ),
+        "source_url": (
+            "https://www.xylem.com/en-uk/resources/case-studies/"
+            "scv-water-agency-selects-evoqua-vessels--media-for-pfas-removal/"
+        ),
+        "source_type": "company_case_study",
+        "evidence_summary": (
+            "Evoqua supplied three lead-lag vessel systems using ion-exchange "
+            "resin to remove PFAS from drinking-water wells and return previously "
+            "decommissioned wells to service. The combined systems can process "
+            "up to 6,000 gallons per minute."
+        ),
+        "confidence_level": "high",
+        "verification_status": "verified_primary_source",
+        "date_accessed": "2026-08-16",
+        "notes": (
+            "Source states that PSR2 Plus was one of the selected ion-exchange "
+            "resins. Event date is not explicit on the case-study page."
+        ),
+    },
+    {
+        "signal_id": "SIG-0016",
+        "organization_id": "ORG-004",
+        "organization_name": "Evoqua / Xylem",
+        "evidence_date": "2024-02-15",
+        "evidence_type": "full_scale_deployment",
+        "technology_labels": "ion_exchange",
+        "treatment_role": "capture",
+        "target_matrix": "drinking_water;groundwater",
+        "maturity_or_deployment_stage": "operational_full_scale",
+        "partner_organizations": "Stratmoor Hills Water District",
+        "location": "Colorado, United States",
+        "source_title": (
+            "Colorado utility removes PFCs from well with Xylem's "
+            "ion exchange system"
+        ),
+        "source_url": (
+            "https://www.xylem.com/en-ie/making-waves/water-utilities-news/"
+            "colorado-utility-removes-pfcs-from-well-with-xylems-ion-exchange-system/"
+        ),
+        "source_type": "company_case_study",
+        "evidence_summary": (
+            "Evoqua, now a Xylem company, supplied a selective single-use "
+            "ion-exchange system for PFAS-contaminated groundwater. The initial "
+            "installation led to expansion into a permanent treatment facility "
+            "capable of producing up to 1.1 million gallons of treated water "
+            "per day."
+        ),
+        "confidence_level": "high",
+        "verification_status": "verified_primary_source",
+        "date_accessed": "2026-08-16",
+        "notes": "",
+    },     
 ]
 
 
