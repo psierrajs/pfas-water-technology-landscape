@@ -116,6 +116,42 @@ organizations = [
             "concentration and destruction."
         ),
     },
+        {
+        "organization_id": "ORG-003",
+        "organization_name": "Arcadis",
+        "normalized_name": "Arcadis",
+        "organization_type": "engineering_and_environmental_services_company",
+        "headquarters_country": "Netherlands",
+        "geographic_scope": "global",
+        "technology_labels": (
+            "activated_carbon;"
+            "ion_exchange;"
+            "foam_fractionation;"
+            "sonolysis;"
+            "integrated_treatment"
+        ),
+        "value_chain_roles": (
+            "engineering;"
+            "technology_integration;"
+            "commercial_deployment;"
+            "technology_development"
+        ),
+        "technology_origin_role": "developer_partner_and_integrator",
+        "commercialization_entity": "Arcadis",
+        "target_matrices": (
+            "groundwater;"
+            "surface_water;"
+            "landfill_leachate;"
+            "industrial_wastewater;"
+            "AFFF_contaminated_water"
+        ),
+        "website": "https://www.arcadis.com/",
+        "notes": (
+            "Global engineering and environmental-services company with PFAS "
+            "deployment experience and development partnerships in fractionation "
+            "and destructive treatment technologies."
+        ),
+    },
 ]
 
 
@@ -471,6 +507,101 @@ signals = [
         "verification_status": "verified_primary_source",
         "date_accessed": "2026-08-15",
         "notes": "",
+    },
+        {
+        "signal_id": "SIG-0011",
+        "organization_id": "ORG-003",
+        "organization_name": "Arcadis",
+        "evidence_date": "2021-08-17",
+        "evidence_type": "commercial_product",
+        "technology_labels": "foam_fractionation",
+        "treatment_role": "concentration",
+        "target_matrix": "landfill_leachate;industrial_wastewater",
+        "maturity_or_deployment_stage": "commercial_launch",
+        "partner_organizations": "Evocra",
+        "location": "North America",
+        "source_title": (
+            "Arcadis launches revolutionary mobile PFAS removal technology"
+        ),
+        "source_url": (
+            "https://www.arcadis.com/en-us/news/north-america/united-states/"
+            "2021/8/arcadis-launches-revolutionary-mobile-pfas-removal-technology"
+        ),
+        "source_type": "company_press_release",
+        "evidence_summary": (
+            "Arcadis and Evocra launched a commercially available portable "
+            "fractionation system for PFAS-contaminated water following a "
+            "two-year pilot collaboration with North American clients."
+        ),
+        "confidence_level": "high",
+        "verification_status": "verified_primary_source",
+        "date_accessed": "2026-08-16",
+        "notes": (
+            "Arcadis reports up to 99% removal of targeted PFAS and major "
+            "reduction in contaminated waste-stream volume."
+        ),
+    },
+    {
+        "signal_id": "SIG-0012",
+        "organization_id": "ORG-003",
+        "organization_name": "Arcadis",
+        "evidence_date": "",
+        "evidence_type": "full_scale_deployment",
+        "technology_labels": "activated_carbon",
+        "treatment_role": "capture",
+        "target_matrix": "groundwater;surface_water",
+        "maturity_or_deployment_stage": "operational_full_scale",
+        "partner_organizations": "Guernsey Airport",
+        "location": "Guernsey, United Kingdom",
+        "source_title": (
+            "Safeguarding Guernsey’s drinking water from PFAS contamination"
+        ),
+        "source_url": (
+            "https://www.arcadis.com/en/projects/europe/united-kingdom/"
+            "protecting-guernseys-water-from-pfass"
+        ),
+        "source_type": "company_project_case_study",
+        "evidence_summary": (
+            "Arcadis designed and installed a granular activated carbon treatment "
+            "system for PFAS-impacted groundwater and surface water associated "
+            "with Guernsey Airport. Arcadis reports treatment capacity of up to "
+            "20 litres per second."
+        ),
+        "confidence_level": "high",
+        "verification_status": "verified_primary_source",
+        "date_accessed": "2026-08-16",
+        "notes": (
+            "Source does not provide a clear project publication or commissioning "
+            "date, so evidence_date is intentionally left blank."
+        ),
+    },
+    {
+        "signal_id": "SIG-0013",
+        "organization_id": "ORG-003",
+        "organization_name": "Arcadis",
+        "evidence_date": "",
+        "evidence_type": "scientific_collaboration",
+        "technology_labels": "sonolysis;integrated_capture_and_destroy",
+        "treatment_role": "destruction",
+        "target_matrix": "PFAS_contaminated_water;liquid_waste",
+        "maturity_or_deployment_stage": "technology_development",
+        "partner_organizations": "University of Surrey",
+        "location": "United Kingdom",
+        "source_title": "Arcadis Global PFAS Remediation Experts — Our Solutions",
+        "source_url": "https://www.arcadis.com/campaigns/pfasau/index.html",
+        "source_type": "company_technology_page",
+        "evidence_summary": (
+            "Arcadis identifies sonolysis as a destructive PFAS technology under "
+            "development with an international scientific team, with the stated "
+            "goal of developing it into a viable commercial remediation option."
+        ),
+        "confidence_level": "high",
+        "verification_status": "verified_primary_source",
+        "date_accessed": "2026-08-16",
+        "notes": (
+            "University of Surrey research records independently show Arcadis "
+            "participation in PFAS sonolysis scale-up research."
+        ),
     },
 ]
 
