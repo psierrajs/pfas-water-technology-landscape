@@ -339,6 +339,39 @@ def main():
             technology_organization_coverage,
             "Technology",
         ),
+                "## Signal volume versus organization coverage",
+        "",
+        (
+            "Raw signal counts should not be interpreted as direct measures "
+            "of market importance or technology leadership."
+        ),
+        "",
+        (
+            "A high signal count may reflect deeper research coverage of one "
+            "organization rather than broad activity across the market."
+        ),
+        "",
+        (
+            "For example, supercritical water oxidation currently has seven "
+            "signals but these are associated with a single organization. "
+            "By contrast, integrated capture and destroy appears across three "
+            "organizations, suggesting a more distributed commercial pattern "
+            "despite having fewer total signals."
+        ),
+        "",
+        (
+            "For this reason, the commercial-intelligence layer reports both "
+            "signal volume and organization coverage. Signal volume indicates "
+            "the amount of observed evidence, while organization coverage "
+            "indicates how widely that pattern is represented across the "
+            "current organization set."
+        ),
+        "",
+        (
+            "Neither metric should be used independently as a proxy for "
+            "market share, competitive strength or technology leadership."
+        ),
+        "",
         "",
         "## Treatment roles",
         "",
