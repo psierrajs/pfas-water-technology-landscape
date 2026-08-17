@@ -643,7 +643,7 @@ signals = [
         "organization_name": "Evoqua / Xylem",
         "evidence_date": "2023-01-23",
         "evidence_type": "acquisition",
-        "technology_labels": "ion_exchange;activated_carbon;PFAS_remediation",
+        "technology_labels": "ion_exchange;activated_carbon",
         "treatment_role": "integrated_treatment",
         "target_matrix": "municipal_water;industrial_water",
         "maturity_or_deployment_stage": "corporate_acquisition",
