@@ -15,6 +15,17 @@ The objective of this analysis is to identify recurring commercialization and de
 | Arcadis | Engineering, integration and technology-development partner | 3 | full scale deployment | operational full scale |
 | Evoqua / Xylem | Technology supplier and integrator within larger corporate platform | 3 | full scale deployment | operational full scale |
 
+## Commercialization-model matrix
+
+The matrix below summarizes the commercialization roles evidenced in the current pilot. 'Primary' indicates a clearly evidenced core role, 'Supporting' indicates a secondary or enabling role, and 'Not established' means that the current evidence does not establish that capability or structure.
+
+| Organization | Technology development | System integration | Commercial deployment | Dedicated vehicle | Larger corporate platform |
+| --- | --- | --- | --- | --- | --- |
+| Battelle | Primary | Supporting | Primary | Primary | Not established |
+| Gradiant | Primary | Primary | Primary | Not established | Not established |
+| Arcadis | Supporting | Primary | Primary | Not established | Not established |
+| Evoqua / Xylem | Not established | Primary | Primary | Not established | Primary |
+
 ## Evidence-type distribution
 
 | Evidence type | Signals |

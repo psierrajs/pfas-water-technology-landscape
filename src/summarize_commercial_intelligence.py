@@ -75,6 +75,40 @@ COMMERCIALIZATION_MODELS = {
         "Technology supplier and integrator within larger corporate platform",
 }
 
+COMMERCIALIZATION_CAPABILITIES = {
+    "originator_and_developer": {
+        "Technology development": "Primary",
+        "System integration": "Supporting",
+        "Commercial deployment": "Primary",
+        "Dedicated commercialization vehicle": "Primary",
+        "Larger corporate platform": "Not established",
+    },
+
+    "developer_and_integrator": {
+        "Technology development": "Primary",
+        "System integration": "Primary",
+        "Commercial deployment": "Primary",
+        "Dedicated commercialization vehicle": "Not established",
+        "Larger corporate platform": "Not established",
+    },
+
+    "developer_partner_and_integrator": {
+        "Technology development": "Supporting",
+        "System integration": "Primary",
+        "Commercial deployment": "Primary",
+        "Dedicated commercialization vehicle": "Not established",
+        "Larger corporate platform": "Not established",
+    },
+
+    "technology_supplier_and_integrator": {
+        "Technology development": "Not established",
+        "System integration": "Primary",
+        "Commercial deployment": "Primary",
+        "Dedicated commercialization vehicle": "Not established",
+        "Larger corporate platform": "Primary",
+    },
+}
+
 
 def prettify(value):
     if pd.isna(value):
@@ -239,6 +273,44 @@ def dataframe_to_markdown(df):
 
     return "\n".join(lines)
 
+def build_commercialization_matrix(organizations):
+    rows = []
+
+    for _, organization in organizations.iterrows():
+        origin_role = organization["technology_origin_role"]
+
+        capabilities = COMMERCIALIZATION_CAPABILITIES.get(
+            origin_role,
+            {},
+        )
+
+        rows.append(
+            {
+                "Organization": organization["normalized_name"],
+                "Technology development": capabilities.get(
+                    "Technology development",
+                    "Not established",
+                ),
+                "System integration": capabilities.get(
+                    "System integration",
+                    "Not established",
+                ),
+                "Commercial deployment": capabilities.get(
+                    "Commercial deployment",
+                    "Not established",
+                ),
+                "Dedicated vehicle": capabilities.get(
+                    "Dedicated commercialization vehicle",
+                    "Not established",
+                ),
+                "Larger corporate platform": capabilities.get(
+                    "Larger corporate platform",
+                    "Not established",
+                ),
+            }
+        )
+
+    return pd.DataFrame(rows)
 
 def main():
     organizations = pd.read_csv(
@@ -253,6 +325,12 @@ def main():
         build_organization_summary(
             organizations,
             signals,
+        )
+    )
+
+    commercialization_matrix = (
+        build_commercialization_matrix(
+            organizations
         )
     )
 
@@ -316,6 +394,21 @@ def main():
         "",
         dataframe_to_markdown(
             organization_summary
+        ),
+        "",
+
+                "## Commercialization-model matrix",
+        "",
+        (
+            "The matrix below summarizes the commercialization roles evidenced "
+            "in the current pilot. 'Primary' indicates a clearly evidenced core "
+            "role, 'Supporting' indicates a secondary or enabling role, and "
+            "'Not established' means that the current evidence does not establish "
+            "that capability or structure."
+        ),
+        "",
+        dataframe_to_markdown(
+            commercialization_matrix
         ),
         "",
         "## Evidence-type distribution",
