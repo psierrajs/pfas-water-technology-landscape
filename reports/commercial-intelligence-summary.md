@@ -131,6 +131,38 @@ This provides commercial evidence for the broader capture → concentrate → de
 The Battelle–Revive and Evoqua–Xylem cases show that technology intelligence cannot rely only on current organization names.
 
 Capabilities may move through spin-outs, commercialization vehicles, acquisitions or corporate integration. Maintaining organization relationships is therefore important for future monitoring.
+## Implications for competitive-intelligence monitoring
+
+The pilot suggests that future monitoring should focus on changes in commercialization status rather than simply on the appearance of new company or technology mentions.
+
+### Deployment progression
+
+Pilot demonstrations, field deployments and full-scale installations should be tracked as distinct maturity signals. Movement between these stages provides stronger evidence of commercial progress than repeated promotional announcements.
+
+### Contracts and public-sector adoption
+
+Government contracts, utility procurements and other public-sector deployments are particularly useful signals because they provide evidence of customer adoption and operational use.
+
+### Partnerships and commercialization vehicles
+
+Partnerships, spin-outs, licensing arrangements and dedicated commercialization vehicles should be monitored because the organization developing a technology may differ from the organization ultimately responsible for selling or deploying it.
+
+### Corporate transactions
+
+Acquisitions and other ownership changes should be treated as technology-intelligence events. They can transfer PFAS capabilities into larger commercial platforms and change the competitive position of both the acquired technology and the acquiring organization.
+
+### Independent validation
+
+Third-party testing, regulatory demonstrations and independent performance validation should be distinguished from vendor claims. These signals can provide stronger evidence that a technology is progressing toward broader market acceptance.
+
+### Technology convergence
+
+Monitoring should also capture combinations of technologies. The present pilot shows commercial signals around integrated capture, concentration and destruction architectures, meaning that individual technology categories alone may not adequately describe emerging competitive positions.
+
+### Suggested monitoring events
+
+A future automated monitoring workflow should therefore detect new deployments, contracts, partnerships, investment events, acquisitions, licensing agreements, regulatory demonstrations, independent validation results and changes in commercialization entities.
+
 
 ## Interpretation limits
 
