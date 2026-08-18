@@ -58,6 +58,7 @@ MATURITY_PRIORITY = {
     "scale_up": 45,
     "technology_development": 30,
     "corporate_acquisition": 20,
+    "technology_commercialization": 50,
 }
 
 
@@ -73,6 +74,8 @@ COMMERCIALIZATION_MODELS = {
 
     "technology_supplier_and_integrator":
         "Technology supplier and integrator within larger corporate platform",
+    "licensed_technology_developer":
+        "Licensed technology developer and commercializer",
 }
 
 COMMERCIALIZATION_CAPABILITIES = {
@@ -80,6 +83,7 @@ COMMERCIALIZATION_CAPABILITIES = {
         "Technology development": "Primary",
         "System integration": "Supporting",
         "Commercial deployment": "Primary",
+        "Licensed research IP": "Not established",
         "Dedicated commercialization vehicle": "Primary",
         "Larger corporate platform": "Not established",
     },
@@ -88,6 +92,7 @@ COMMERCIALIZATION_CAPABILITIES = {
         "Technology development": "Primary",
         "System integration": "Primary",
         "Commercial deployment": "Primary",
+        "Licensed research IP": "Not established",
         "Dedicated commercialization vehicle": "Not established",
         "Larger corporate platform": "Not established",
     },
@@ -96,6 +101,7 @@ COMMERCIALIZATION_CAPABILITIES = {
         "Technology development": "Supporting",
         "System integration": "Primary",
         "Commercial deployment": "Primary",
+        "Licensed research IP": "Not established",
         "Dedicated commercialization vehicle": "Not established",
         "Larger corporate platform": "Not established",
     },
@@ -104,8 +110,18 @@ COMMERCIALIZATION_CAPABILITIES = {
         "Technology development": "Not established",
         "System integration": "Primary",
         "Commercial deployment": "Primary",
+        "Licensed research IP": "Not established",
         "Dedicated commercialization vehicle": "Not established",
         "Larger corporate platform": "Primary",
+    },
+
+    "licensed_technology_developer": {
+        "Technology development": "Primary",
+        "System integration": "Supporting",
+        "Commercial deployment": "Primary",
+        "Licensed research IP": "Primary",
+        "Dedicated commercialization vehicle": "Not established",
+        "Larger corporate platform": "Not established",
     },
 }
 
@@ -297,6 +313,10 @@ def build_commercialization_matrix(organizations):
                 ),
                 "Commercial deployment": capabilities.get(
                     "Commercial deployment",
+                    "Not established",
+                ),
+                "Licensed research IP": capabilities.get(
+                    "Licensed research IP",
                     "Not established",
                 ),
                 "Dedicated vehicle": capabilities.get(

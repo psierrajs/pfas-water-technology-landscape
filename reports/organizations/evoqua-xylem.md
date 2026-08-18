@@ -49,7 +49,7 @@ Evoqua developed and deployed PFAS treatment systems using ion exchange and othe
 
 **Date:** 2023-01-23
 
-**Technology:** ion exchange, activated carbon, PFAS remediation
+**Technology:** ion exchange, activated carbon
 
 **Treatment role:** integrated treatment
 

@@ -73,6 +73,8 @@ COMMERCIALIZATION_MODELS = {
     "technology_supplier_and_integrator": (
         "Technology supplier and integrator within larger corporate platform"
     ),
+    "licensed_technology_developer":
+    "Licensed technology developer and commercializer",
 }
 
 

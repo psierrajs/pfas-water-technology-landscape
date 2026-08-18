@@ -186,6 +186,42 @@ organizations = [
             "of Evoqua in 2023 and continues to surface Evoqua PFAS capabilities."
         ),
     },
+        {
+        "organization_id": "ORG-005",
+        "organization_name": "Aquagga, Inc.",
+        "normalized_name": "Aquagga",
+        "organization_type": "water_technology_startup",
+        "headquarters_country": "United States",
+        "geographic_scope": "United States; global",
+        "technology_labels": (
+            "hydrothermal_alkaline_treatment;"
+            "hydrothermal_destruction;"
+            "integrated_capture_and_destroy"
+        ),
+        "value_chain_roles": (
+            "technology_development;"
+            "technology_commercialization;"
+            "commercial_deployment;"
+            "system_integration"
+        ),
+        "technology_origin_role": "licensed_technology_developer",
+        "commercialization_entity": "Aquagga",
+        "target_matrices": (
+            "industrial_wastewater;"
+            "PFAS_concentrates;"
+            "AFFF;"
+            "landfill_leachate;"
+            "high_TDS_wastewater"
+        ),
+        "website": "https://www.aquagga.com/",
+        "notes": (
+            "Commercial developer of Hydrothermal Alkaline Treatment (HALT) "
+            "for PFAS destruction. Aquagga holds exclusive licenses to "
+            "foundational HALT and hydrothermal-processing intellectual "
+            "property and is progressing the technology through commercial "
+            "systems and field demonstrations."
+        ),
+    },
 ]
 
 
@@ -736,7 +772,193 @@ signals = [
         "verification_status": "verified_primary_source",
         "date_accessed": "2026-08-16",
         "notes": "",
-    },     
+    },   
+        {
+        "signal_id": "SIG-0017",
+        "organization_id": "ORG-005",
+        "organization_name": "Aquagga, Inc.",
+        "evidence_date": "2024-04-01",
+        "evidence_type": "field_deployment",
+        "technology_labels": (
+            "hydrothermal_alkaline_treatment;"
+            "hydrothermal_destruction"
+        ),
+        "treatment_role": "destruction",
+        "target_matrix": "industrial_wastewater",
+        "maturity_or_deployment_stage": "commercial_field_deployment",
+        "partner_organizations": "3M Company",
+        "location": "United States",
+        "source_title": (
+            "Case Study - Real World Industrial PFAS Destruction"
+        ),
+        "source_url": (
+            "https://www.aquagga.com/"
+            "case-study-real-world-industrial-pfas-destruction"
+        ),
+        "source_type": "company_case_study",
+        "evidence_summary": (
+            "Aquagga deployed a commercial-scale HALT system at an "
+            "industrial manufacturing facility for continuous treatment "
+            "of complex PFAS-containing wastewater. The demonstration "
+            "treated real industrial wastewater and was presented as a "
+            "transition from product development toward commercial deployment."
+        ),
+        "confidence_level": "high",
+        "verification_status": "verified_primary_source",
+        "date_accessed": "2026-08-18",
+        "notes": (
+            "Aquagga reports greater than 99% total PFAS destruction "
+            "and greater than 95% measured defluorination."
+        ),
+    },
+    {
+        "signal_id": "SIG-0018",
+        "organization_id": "ORG-005",
+        "organization_name": "Aquagga, Inc.",
+        "evidence_date": "",
+        "evidence_type": "commercial_product",
+        "technology_labels": (
+            "hydrothermal_alkaline_treatment;"
+            "hydrothermal_destruction"
+        ),
+        "treatment_role": "destruction",
+        "target_matrix": "PFAS_concentrates",
+        "maturity_or_deployment_stage": "commercial_launch",
+        "partner_organizations": "",
+        "location": "United States; global",
+        "source_title": "Hydrothermal Alkaline Treatment PFAS Destruction",
+        "source_url": "https://www.aquagga.com/ourtech",
+        "source_type": "company_technology_page",
+        "evidence_summary": (
+            "Aquagga states that its HALT systems are commercially "
+            "available to order, with product configurations offered for "
+            "lease, purchase or demonstration projects."
+        ),
+        "confidence_level": "high",
+        "verification_status": "verified_primary_source",
+        "date_accessed": "2026-08-18",
+        "notes": (
+            "Product families listed include Colt, Steed and Stampede systems."
+        ),
+    },
+    {
+        "signal_id": "SIG-0019",
+        "organization_id": "ORG-005",
+        "organization_name": "Aquagga, Inc.",
+        "evidence_date": "2025-06-02",
+        "evidence_type": "regulatory_or_public_sector_signal",
+        "technology_labels": (
+            "hydrothermal_alkaline_treatment;"
+            "hydrothermal_destruction"
+        ),
+        "treatment_role": "destruction",
+        "target_matrix": "AFFF;PFAS_concentrates",
+        "maturity_or_deployment_stage": "government_demonstration",
+        "partner_organizations": (
+            "United States Department of Defense;"
+            "Defense Innovation Unit;"
+            "United States Air Force;"
+            "United States Navy"
+        ),
+        "location": "United States",
+        "source_title": (
+            "Aquagga, Inc. Demonstrates Successful PFAS Destruction "
+            "with DoD-Funded Project"
+        ),
+        "source_url": (
+            "https://www.aquagga.com/blog/"
+            "aquagga-validates-halt-technology-in-dod-funded-demonstration-project"
+        ),
+        "source_type": "company_press_release",
+        "evidence_summary": (
+            "Aquagga reported completion of a DoD-funded HALT demonstration "
+            "involving concentrated PFAS-containing liquids and an AFFF "
+            "mixture, providing public-sector validation of the technology."
+        ),
+        "confidence_level": "high",
+        "verification_status": "verified_primary_source",
+        "date_accessed": "2026-08-18",
+        "notes": (
+            "The project involved ESTCP and collaboration with DIU, "
+            "the U.S. Air Force and U.S. Navy."
+        ),
+    },
+    {
+        "signal_id": "SIG-0020",
+        "organization_id": "ORG-005",
+        "organization_name": "Aquagga, Inc.",
+        "evidence_date": "2025-07-31",
+        "evidence_type": "field_deployment",
+        "technology_labels": (
+            "hydrothermal_alkaline_treatment;"
+            "hydrothermal_destruction"
+        ),
+        "treatment_role": "destruction",
+        "target_matrix": "AFFF",
+        "maturity_or_deployment_stage": "government_demonstration",
+        "partner_organizations": (
+            "United States Army Corps of Engineers;"
+            "National Defense Center for Energy and Environment"
+        ),
+        "location": "Vicksburg, Mississippi, United States",
+        "source_title": (
+            "Aquagga Mobilizes Steed Systems for U.S. Army Corps "
+            "of Engineers AFFF Destruction Project"
+        ),
+        "source_url": (
+            "https://www.aquagga.com/blog/"
+            "aquagga-mobilizes-steed-systems-for-u-s-army-corps-of-engineers-"
+            "afff-destruction-project"
+        ),
+        "source_type": "company_press_release",
+        "evidence_summary": (
+            "Aquagga mobilized two Steed Series HALT systems to the "
+            "U.S. Army Corps of Engineers ERDC site in Mississippi for "
+            "an AFFF destruction demonstration funded by NDCEE."
+        ),
+        "confidence_level": "high",
+        "verification_status": "verified_primary_source",
+        "date_accessed": "2026-08-18",
+        "notes": (
+            "The deployment used two systems operating in parallel, "
+            "providing evidence of scaling and government-site operation."
+        ),
+    },
+    {
+        "signal_id": "SIG-0021",
+        "organization_id": "ORG-005",
+        "organization_name": "Aquagga, Inc.",
+        "evidence_date": "",
+        "evidence_type": "licensing",
+        "technology_labels": (
+            "hydrothermal_alkaline_treatment;"
+            "hydrothermal_destruction"
+        ),
+        "treatment_role": "destruction",
+        "target_matrix": "PFAS_contaminated_liquids",
+        "maturity_or_deployment_stage": "technology_commercialization",
+        "partner_organizations": (
+            "Colorado School of Mines;"
+            "University of Washington"
+        ),
+        "location": "United States",
+        "source_title": "Hydrothermal Alkaline Treatment PFAS Destruction",
+        "source_url": "https://www.aquagga.com/ourtech",
+        "source_type": "company_technology_page",
+        "evidence_summary": (
+            "Aquagga states that it is the exclusive licensee of the "
+            "foundational HALT patent from Colorado School of Mines and "
+            "also holds an exclusive license to hydrothermal-processing "
+            "intellectual property from the University of Washington."
+        ),
+        "confidence_level": "high",
+        "verification_status": "verified_primary_source",
+        "date_accessed": "2026-08-18",
+        "notes": (
+            "This signal captures the research-IP-to-startup "
+            "commercialization pathway."
+        ),
+    },  
 ]
 
 

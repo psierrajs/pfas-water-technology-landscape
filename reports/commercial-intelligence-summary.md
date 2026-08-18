@@ -2,7 +2,7 @@
 
 ## Scope
 
-The current commercial-intelligence pilot contains 4 organizations and 16 structured strategic signals.
+The current commercial-intelligence pilot contains 5 organizations and 21 structured strategic signals.
 
 The objective of this analysis is to identify recurring commercialization and deployment patterns rather than to produce a quantitative ranking of companies.
 
@@ -14,51 +14,55 @@ The objective of this analysis is to identify recurring commercialization and de
 | Gradiant | Integrated technology developer and commercial vendor | 3 | field deployment | commercial field deployment |
 | Arcadis | Engineering, integration and technology-development partner | 3 | full scale deployment | operational full scale |
 | Evoqua / Xylem | Technology supplier and integrator within larger corporate platform | 3 | full scale deployment | operational full scale |
+| Aquagga | Licensed technology developer and commercializer | 5 | field deployment | commercial field deployment |
 
 ## Commercialization-model matrix
 
 The matrix below summarizes the commercialization roles evidenced in the current pilot. 'Primary' indicates a clearly evidenced core role, 'Supporting' indicates a secondary or enabling role, and 'Not established' means that the current evidence does not establish that capability or structure.
 
-| Organization | Technology development | System integration | Commercial deployment | Dedicated vehicle | Larger corporate platform |
-| --- | --- | --- | --- | --- | --- |
-| Battelle | Primary | Supporting | Primary | Primary | Not established |
-| Gradiant | Primary | Primary | Primary | Not established | Not established |
-| Arcadis | Supporting | Primary | Primary | Not established | Not established |
-| Evoqua / Xylem | Not established | Primary | Primary | Not established | Primary |
+| Organization | Technology development | System integration | Commercial deployment | Licensed research IP | Dedicated vehicle | Larger corporate platform |
+| --- | --- | --- | --- | --- | --- | --- |
+| Battelle | Primary | Supporting | Primary | Not established | Primary | Not established |
+| Gradiant | Primary | Primary | Primary | Not established | Not established | Not established |
+| Arcadis | Supporting | Primary | Primary | Not established | Not established | Not established |
+| Evoqua / Xylem | Not established | Primary | Primary | Not established | Not established | Primary |
+| Aquagga | Primary | Supporting | Primary | Primary | Not established | Not established |
 
 ## Evidence-type distribution
 
 | Evidence type | Signals |
 |---|---:|
 | full scale deployment | 4 |
+| commercial product | 3 |
+| field deployment | 3 |
 | other strategic signal | 2 |
-| commercial product | 2 |
+| regulatory or public sector signal | 2 |
 | partnership | 1 |
 | pilot deployment | 1 |
 | investment | 1 |
 | contract | 1 |
-| regulatory or public sector signal | 1 |
-| field deployment | 1 |
 | scientific collaboration | 1 |
 | acquisition | 1 |
+| licensing | 1 |
 
 ## Deployment and maturity signals
 
 | Maturity / deployment stage | Signals |
 |---|---:|
+| government demonstration | 3 |
+| commercial launch | 3 |
 | operational full scale | 3 |
-| commercial launch | 2 |
+| commercial field deployment | 2 |
 | commercialization preparation | 1 |
 | customer demonstration | 1 |
 | scale up | 1 |
 | commercial scale up | 1 |
 | commercial full scale | 1 |
 | commercial public sector deployment | 1 |
-| government demonstration | 1 |
 | third party validation | 1 |
-| commercial field deployment | 1 |
 | technology development | 1 |
 | corporate acquisition | 1 |
+| technology commercialization | 1 |
 
 ## Technology signals
 
@@ -66,6 +70,8 @@ The matrix below summarizes the commercialization roles evidenced in the current
 |---|---:|---:|
 | supercritical water oxidation | 7 | 1 |
 | integrated capture and destroy | 5 | 3 |
+| hydrothermal alkaline treatment | 5 | 1 |
+| hydrothermal destruction | 5 | 1 |
 | foam fractionation | 4 | 2 |
 | electrochemical oxidation | 3 | 1 |
 | ion exchange | 3 | 1 |
@@ -89,7 +95,7 @@ Neither metric should be used independently as a proxy for market share, competi
 
 | Treatment role | Signals | Organizations |
 |---|---:|---:|
-| destruction | 7 | 2 |
+| destruction | 12 | 3 |
 | integrated treatment | 5 | 3 |
 | capture | 3 | 2 |
 | concentration | 1 | 1 |
