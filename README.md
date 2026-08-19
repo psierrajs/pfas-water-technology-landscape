@@ -68,6 +68,22 @@ Current outputs include:
 - [Commercial organization comparison](reports/commercial-organization-comparison.md)
 - [Organization intelligence profiles](reports/organizations/)
 
+### Commercial intelligence methodology
+
+The commercial-intelligence layer uses structured organization and signal records to track evidence of technology commercialization, deployment and competitive positioning.
+
+Signals are classified by:
+
+- evidence type, such as deployment, contract, partnership, acquisition or licensing;
+- technology and treatment role;
+- deployment or maturity stage;
+- related organizations;
+- source provenance and confidence.
+
+The analysis distinguishes between **signal volume** and **organization coverage**. A high number of signals may reflect deeper research on a single organization, while broader organization coverage can indicate that a technology or commercialization pattern is appearing across multiple market participants.
+
+The current pilot intentionally avoids quantitative company rankings. Instead, it compares commercialization models, deployment evidence and technology pathways while preserving the underlying evidence trail.
+
 ## Repository structure
 
 ```text
@@ -103,4 +119,5 @@ A first complete version of the final technology landscape report is available h
 
 Further work may extend the landscape with additional patent technologies, commercial intelligence and ongoing monitoring.
 
+The core PFAS technology landscape is complete as v1.0; the current work extends the project with a commercial and competitive-intelligence layer.
 
