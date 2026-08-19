@@ -120,6 +120,26 @@ Core analysis complete. Portfolio preparation in progress.
 - Completed an editorial and terminology review of the final report.
 - Updated the README to present the project as a portfolio-ready intelligence project.
 
+## Commercial intelligence extension
+
+The v1.1 commercial-intelligence layer is now operational as a pilot.
+
+Current scope:
+
+- 5 organizations
+- 21 structured commercial signals
+- organization intelligence profiles
+- cross-company commercial comparison
+- commercialization-model analysis
+- signal-volume versus organization-coverage methodology
+- competitive-intelligence monitoring framework
+
+The pilot currently includes Battelle, Gradiant, Arcadis, Evoqua/Xylem and Aquagga.
+
+The next phase should expand organization coverage and begin automating monitoring of deployments, contracts, partnerships, licensing, acquisitions, validation events and commercialization changes.
+
+The current pilot is not intended to provide a quantitative ranking of companies or market leadership.
+
 ## Key outputs
 
 - `README.md`
