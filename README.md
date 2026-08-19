@@ -58,6 +58,16 @@ Key findings include:
 - Science–patent integration
 - Reproducible figures and intermediate reports
 
+## Commercial intelligence extension
+
+The project also includes an initial commercial and competitive-intelligence layer built from structured evidence on selected PFAS treatment organizations.
+
+Current outputs include:
+
+- [Commercial intelligence summary](reports/commercial-intelligence-summary.md)
+- [Commercial organization comparison](reports/commercial-organization-comparison.md)
+- [Organization intelligence profiles](reports/organizations/)
+
 ## Repository structure
 
 ```text
