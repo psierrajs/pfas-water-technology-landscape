@@ -1,6 +1,7 @@
 from pathlib import Path
 
 import pandas as pd
+import re
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -84,6 +85,10 @@ def prettify(value):
 
     return str(value).replace("_", " ")
 
+def slugify(value):
+    value = str(value).lower()
+    value = re.sub(r"[^a-z0-9]+", "-", value)
+    return value.strip("-")
 
 def strongest_value(group, column, priority):
     values = [
@@ -143,7 +148,10 @@ def build_comparison(organizations, signals):
 
         rows.append(
             {
-                "Organization": organization["normalized_name"],
+                "Organization": (
+                    f"[{organization['normalized_name']}]"
+                    f"(organizations/{slugify(organization['normalized_name'])}.md)"
+                ),
                 "Organization type": prettify(
                     organization["organization_type"]
                 ),
