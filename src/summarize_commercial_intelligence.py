@@ -1,4 +1,5 @@
 from pathlib import Path
+import re
 from collections import Counter
 
 import pandas as pd
@@ -136,6 +137,10 @@ def prettify(value):
         .replace(";", ", ")
     )
 
+def slugify(value):
+    value = str(value).lower()
+    value = re.sub(r"[^a-z0-9]+", "-", value)
+    return value.strip("-")
 
 def split_multivalue(value):
     if pd.isna(value):
@@ -247,7 +252,10 @@ def build_organization_summary(organizations, signals):
 
         rows.append(
             {
-                "Organization": organization["normalized_name"],
+                "Organization": (
+                    f"[{organization['normalized_name']}]"
+                    f"(organizations/{slugify(organization['normalized_name'])}.md)"
+                ),
                 "Model": COMMERCIALIZATION_MODELS.get(
                     organization["technology_origin_role"],
                     prettify(

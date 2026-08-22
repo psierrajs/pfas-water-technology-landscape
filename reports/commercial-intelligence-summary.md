@@ -10,11 +10,11 @@ The objective of this analysis is to identify recurring commercialization and de
 
 | Organization | Model | Signals | Strongest evidence | Highest maturity |
 | --- | --- | --- | --- | --- |
-| Battelle | Technology originator with dedicated commercialization vehicle | 7 | full scale deployment | commercial full scale |
-| Gradiant | Integrated technology developer and commercial vendor | 3 | field deployment | commercial field deployment |
-| Arcadis | Engineering, integration and technology-development partner | 3 | full scale deployment | operational full scale |
-| Evoqua / Xylem | Technology supplier and integrator within larger corporate platform | 3 | full scale deployment | operational full scale |
-| Aquagga | Licensed technology developer and commercializer | 5 | field deployment | commercial field deployment |
+| [Battelle](organizations/battelle.md) | Technology originator with dedicated commercialization vehicle | 7 | full scale deployment | commercial full scale |
+| [Gradiant](organizations/gradiant.md) | Integrated technology developer and commercial vendor | 3 | field deployment | commercial field deployment |
+| [Arcadis](organizations/arcadis.md) | Engineering, integration and technology-development partner | 3 | full scale deployment | operational full scale |
+| [Evoqua / Xylem](organizations/evoqua-xylem.md) | Technology supplier and integrator within larger corporate platform | 3 | full scale deployment | operational full scale |
+| [Aquagga](organizations/aquagga.md) | Licensed technology developer and commercializer | 5 | field deployment | commercial field deployment |
 
 ## Commercialization-model matrix
 
