@@ -138,6 +138,14 @@ The pilot currently includes Battelle, Gradiant, Arcadis, Evoqua/Xylem and Aquag
 
 The next phase should expand organization coverage and begin automating monitoring of deployments, contracts, partnerships, licensing, acquisitions, validation events and commercialization changes.
 
+### Suggested next steps
+
+1. Expand the organization set with additional PFAS treatment companies and commercialization models.
+2. Standardize organization coverage so signal counts are less affected by uneven research depth.
+3. Introduce repeatable monitoring for deployments, contracts, partnerships, licensing, acquisitions and validation events.
+4. Track changes in commercialization entities, ownership and technology-transfer relationships.
+5. Explore a lightweight organization–technology network linking companies, research institutions, technologies and commercial signals.
+
 The current pilot is not intended to provide a quantitative ranking of companies or market leadership.
 
 ## Key outputs
