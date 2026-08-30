@@ -67,11 +67,12 @@ Current outputs include:
 - [Commercial intelligence summary](reports/commercial-intelligence-summary.md)
 - [Commercial organization comparison](reports/commercial-organization-comparison.md)
 - [Organization intelligence profiles](reports/organizations/)
+- [Organization–technology network](reports/organization-technology-network.md)
 
 ### Commercial intelligence methodology
 
 The commercial-intelligence layer uses structured organization and signal records to track evidence of technology commercialization, deployment and competitive positioning.
-
+A lightweight organization–technology network is also generated to expose relationships between companies, treatment technologies and commercialization entities, providing a foundation for future ownership, licensing, partnership and deployment-network analysis.
 Signals are classified by:
 
 - evidence type, such as deployment, contract, partnership, acquisition or licensing;
