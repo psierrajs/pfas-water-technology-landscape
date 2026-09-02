@@ -60,6 +60,7 @@ Current outputs include:
 - [Organization intelligence profiles](reports/organizations/)
 - [Organization–technology network](reports/organization-technology-network.md)
 - [Technology commercialization summary](reports/technology-commercialization-summary.md)
+- [Commercial intelligence coverage gaps](reports/commercial-coverage-gaps.md)
 
 ### Commercial intelligence methodology
 
@@ -76,6 +77,8 @@ Signals are classified by:
 The analysis distinguishes between **signal volume** and **organization coverage**. A high number of signals may reflect deeper research on a single organization, while broader organization coverage can indicate that a technology or commercialization pattern is appearing across multiple market participants.
 
 The current pilot intentionally avoids quantitative company rankings. Instead, it compares commercialization models, deployment evidence and technology pathways while preserving the underlying evidence trail.
+
+A dedicated coverage-gap report identifies technologies represented by only one organization in the current pilot, treating these as research-priority gaps rather than evidence of limited market activity.
 
 ## Repository structure
 
