@@ -61,6 +61,7 @@ Current outputs include:
 - [Organization–technology network](reports/organization-technology-network.md)
 - [Technology commercialization summary](reports/technology-commercialization-summary.md)
 - [Commercial intelligence coverage gaps](reports/commercial-coverage-gaps.md)
+- [Commercial research priorities](reports/commercial-research-priorities.md)
 
 ### Commercial intelligence methodology
 
@@ -79,6 +80,8 @@ The analysis distinguishes between **signal volume** and **organization coverage
 The current pilot intentionally avoids quantitative company rankings. Instead, it compares commercialization models, deployment evidence and technology pathways while preserving the underlying evidence trail.
 
 A dedicated coverage-gap report identifies technologies represented by only one organization in the current pilot, treating these as research-priority gaps rather than evidence of limited market activity.
+
+A research-priority report combines organization coverage with signal volume to identify which technology areas should be investigated next, while explicitly avoiding interpretation as a ranking of commercial attractiveness.
 
 ## Repository structure
 
