@@ -133,6 +133,8 @@ Current scope:
 - commercialization-model analysis
 - signal-volume versus organization-coverage methodology
 - competitive-intelligence monitoring framework
+- commercial-intelligence coverage-gap analysis
+- research-priority analysis based on organization coverage and signal volume
 
 The pilot currently includes Battelle, Gradiant, Arcadis, Evoqua/Xylem and Aquagga.
 
@@ -140,8 +142,8 @@ The next phase should expand organization coverage and begin automating monitori
 
 ### Suggested next steps
 
-1. Expand the organization set with additional PFAS treatment companies and commercialization models.
-2. Standardize organization coverage so signal counts are less affected by uneven research depth.
+1. Use the research-priority report to expand organization coverage in technologies currently represented by a single organization.
+2. Reassess research priorities as new organizations and signals are added, so the gap analysis remains evidence-driven rather than static.
 3. Introduce repeatable monitoring for deployments, contracts, partnerships, licensing, acquisitions and validation events.
 4. Track changes in commercialization entities, ownership and technology-transfer relationships.
 5. Explore a lightweight organization–technology network linking companies, research institutions, technologies and commercial signals.
