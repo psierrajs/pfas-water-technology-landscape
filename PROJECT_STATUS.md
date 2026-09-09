@@ -169,6 +169,9 @@ The current pilot is not intended to provide a quantitative ranking of companies
 - `figures/science_patent_technology_comparison.png`
 - documented scientific and patent search strategies
 - reusable Python scripts in `src/`
+- [Commercial research priorities](reports/commercial-research-priorities.md)
+- [Commercial intelligence coverage gaps](reports/commercial-coverage-gaps.md)
+- [Technology commercialization summary](reports/technology-commercialization-summary.md)
 
 ## Current methodological decisions
 
