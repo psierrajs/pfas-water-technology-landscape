@@ -108,6 +108,8 @@ Search strategies, processing scripts, classification steps, validation procedur
 
 Most analytical transformations are implemented in Python rather than through manual editing of derived datasets.
 
+A dedicated validation script checks the commercial-intelligence dataset for duplicate identifiers, missing required fields and signals referencing unknown organizations before downstream reports are generated.
+
 ## Project status
 
 The core scientific, patent and science–patent integration analyses have been completed.
