@@ -62,6 +62,7 @@ Current outputs include:
 - [Technology commercialization summary](reports/technology-commercialization-summary.md)
 - [Commercial intelligence coverage gaps](reports/commercial-coverage-gaps.md)
 - [Commercial research priorities](reports/commercial-research-priorities.md)
+- [Commercial intelligence index](reports/commercial-intelligence-index.md)
 
 ### Commercial intelligence methodology
 
