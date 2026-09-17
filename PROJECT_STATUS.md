@@ -172,6 +172,7 @@ The current pilot is not intended to provide a quantitative ranking of companies
 - [Commercial research priorities](reports/commercial-research-priorities.md)
 - [Commercial intelligence coverage gaps](reports/commercial-coverage-gaps.md)
 - [Technology commercialization summary](reports/technology-commercialization-summary.md)
+- [Commercial intelligence index](reports/commercial-intelligence-index.md)
 
 ## Current methodological decisions
 
