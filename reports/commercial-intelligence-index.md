@@ -28,6 +28,18 @@ The **coverage-gap analysis** identifies technologies that are weakly represente
 
 The **research-priority report** converts those gaps into an evidence-driven shortlist for future organization discovery and commercial research.
 
+## Suggested reading order
+
+For a quick overview, start with the [commercial intelligence summary](commercial-intelligence-summary.md).
+
+Then use the [commercial organization comparison](commercial-organization-comparison.md) to compare commercialization models and deployment evidence across the current pilot organizations.
+
+Open the [organization intelligence profiles](organizations/) when you need the underlying evidence trail for a specific company.
+
+Use the [technology commercialization summary](technology-commercialization-summary.md) and [organization–technology network](organization-technology-network.md) to explore how technologies and commercialization models overlap across organizations.
+
+Finally, consult the [commercial intelligence coverage gaps](commercial-coverage-gaps.md) and [commercial research priorities](commercial-research-priorities.md) to identify where the dataset should be expanded next.
+
 ## Current pilot scope
 
 The current pilot includes five organizations and 21 structured commercial signals.
